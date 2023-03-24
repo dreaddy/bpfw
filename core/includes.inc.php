@@ -52,13 +52,13 @@ bpfw_register_css("bpfwStyles", BPFW_CSS_URI . "bpfwstyles.css?v=8");
 bpfw_register_css("datatables", VENDOR_URI . "datatables/datatables/media/css/jquery.dataTables.min.css");
 bpfw_register_css("datatables-responsive", VENDOR_URI . "drmonty/datatables-responsive/css/dataTables.responsive.min.css");
 bpfw_register_css("datetimepicker", LIBS_URI . "datetimepicker/build/jquery.datetimepicker.min.css");
-bpfw_register_css("bootstrap_fileinput_locale_explorer_fas", VENDOR_URI . "kartik-v/bootstrap-fileinput/themes/explorer-fa6/theme.min.css", true);
-bpfw_register_css("bootstrap_fileinput", VENDOR_URI . "kartik-v/bootstrap-fileinput/css/fileinput.min.css", true);
+bpfw_register_css("bootstrap_fileinput_locale_explorer_fas", LIBS_URI . "kartik-v/bootstrap-fileinput/themes/explorer-fa6/theme.min.css", true);
+bpfw_register_css("bootstrap_fileinput", LIBS_URI . "kartik-v/bootstrap-fileinput/css/fileinput.min.css", true);
 bpfw_register_css("listStyles", BPFW_CSS_URI."themes/slimlist/slimlist.css?v=2", array("bpfwStyles") );
 
 bpfw_register_js("jquery", VENDOR_URI . "components/jquery/jquery.min.js");
-bpfw_register_js("piexif_js", VENDOR_URI . "kartik-v/bootstrap-fileinput/js/plugins/sortable.min.js", true, array("bootstrap", "bootstrap_fileinput"));
-bpfw_register_js("purify_js", VENDOR_URI . "kartik-v/bootstrap-fileinput/js/plugins/piexif.min.js", true, array("bootstrap", "bootstrap_fileinput"));
+bpfw_register_js("piexif_js", LIBS_URI . "kartik-v/bootstrap-fileinput/js/plugins/sortable.min.js", true, array("bootstrap", "bootstrap_fileinput"));
+bpfw_register_js("purify_js", LIBS_URI . "kartik-v/bootstrap-fileinput/js/plugins/piexif.min.js", true, array("bootstrap", "bootstrap_fileinput"));
 bpfw_register_js("popper", BPFW_JS_URI . "popper.min.js", true);
 bpfw_register_js("bootstrap", VENDOR_URI . "twbs/bootstrap/dist/js/bootstrap.min.js", true, array("jquery"/*, "popper"*/));
 bpfw_register_js("bootstrap-select", VENDOR_URI . "snapappointments/bootstrap-select/dist/js/bootstrap-select.min.js", true, array("bootstrap"));
@@ -66,7 +66,7 @@ bpfw_register_js("datatables", VENDOR_URI . "datatables/datatables/media/js/jque
 bpfw_register_js("datatables-responsive", VENDOR_URI . "drmonty/datatables-responsive/js/dataTables.responsive.min.js", true);
 bpfw_register_js("datetimepicker", LIBS_URI . "datetimepicker/build/jquery.datetimepicker.full.min.js", true);
 bpfw_register_js("signaturepad", LIBS_URI . "signaturePad/jquery.signaturepad.js", true);
-bpfw_register_js("bootstrap_fileinput", VENDOR_URI . "kartik-v/bootstrap-fileinput/js/fileinput.min.js", true, array("bootstrap", "purify_js", "sortable_js", "piexif_js"));
-bpfw_register_js("bootstrap_fileinput_locale_de", VENDOR_URI . "kartik-v/bootstrap-fileinput/js/locales/de.js", true, array("bootstrap", "bootstrap_fileinput"));
-bpfw_register_js("bootstrap_fileinput_locale_explorer_fas", VENDOR_URI . "kartik-v/bootstrap-fileinput/themes/explorer-fa6/theme.min.js", true, array("bootstrap", "bootstrap_fileinput", "bootstrap_fileinput_locale_de"));
+bpfw_register_js("bootstrap_fileinput", LIBS_URI . "kartik-v/bootstrap-fileinput/js/fileinput.min.js", true, array("bootstrap", "purify_js", "sortable_js", "piexif_js"));
+bpfw_register_js("bootstrap_fileinput_locale_de", LIBS_URI . "kartik-v/bootstrap-fileinput/js/locales/de.js", true, array("bootstrap", "bootstrap_fileinput"));
+bpfw_register_js("bootstrap_fileinput_locale_explorer_fas", LIBS_URI . "kartik-v/bootstrap-fileinput/themes/explorer-fa6/theme.min.js", true, array("bootstrap", "bootstrap_fileinput", "bootstrap_fileinput_locale_de"));
 bpfw_register_js("common_js", BPFW_JS_URI . "bpfw_common.js?v=8", true);

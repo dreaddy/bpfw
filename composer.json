@@ -21,7 +21,6 @@
     "components/font-awesome": "^6.1",
     "snapappointments/bootstrap-select": "^1.13.14",
     "tinymce/tinymce": "^5.0",
-    "kartik-v/bootstrap-fileinput": "dev-master",
     "php-imap/php-imap": "^4.1",
     "linusu/bitcoin-address-validator": "^0.1.2",
     "greensea/keccak": "^1.0",
