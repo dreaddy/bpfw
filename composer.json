@@ -1,0 +1,38 @@
+{
+  "name": "bpfw/bpfw",
+  "type": "library",
+  "description": "Bpfw (Business Process Framework) is a Framework for rapid creation of web based business applications like CRM, ERP, time tracking, merchandise management and everything else about CRUD based data management.",
+  "homepage": "http://www.torsten-lueders.de/",
+  "author": "Torsten Lüders",
+  "license": [
+    "MIT"
+  ],
+  "support": {
+    "forum": "http://www.torsten-lueders.de/",
+    "source": "https://github.com/dreaddy/bpfw/"
+  },
+  "require": {
+    "mpdf/mpdf": "^8.0",
+    "phpmailer/phpmailer": "^6.0",
+    "components/jquery": "^3.3",
+    "datatables/datatables": "^1.10",
+    "twbs/bootstrap": "^4",
+    "drmonty/datatables-responsive": "^2.2",
+    "components/font-awesome": "^6.1",
+    "snapappointments/bootstrap-select": "^1.13.14",
+    "tinymce/tinymce": "^5.0",
+    "kartik-v/bootstrap-fileinput": "dev-master",
+    "php-imap/php-imap": "^4.1",
+    "linusu/bitcoin-address-validator": "^0.1.2",
+    "greensea/keccak": "^1.0",
+    "digitick/sepa-xml" : "1.1.*",
+    "ext-curl": "*",
+    "ext-zip": "*",
+    "ext-mbstring": "*",
+    "ext-gd": "*",
+    "ext-imap": "*",
+    "ext-mysqli": "*",
+    "ext-ctype": "*",
+    "ext-fileinfo": "*"
+  }
+}

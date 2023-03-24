@@ -1,0 +1,883 @@
+@CHARSET "utf-8";
+
+* {
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* nunito-sans-regular - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nunitosans/nunito-sans-v6-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''), url('../fonts/nunitosans/nunito-sans-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/nunitosans/nunito-sans-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/nunitosans/nunito-sans-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/nunitosans/nunito-sans-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/nunitosans/nunito-sans-v6-latin-regular.svg#NunitoSans') format('svg'); /* Legacy iOS */
+}
+
+.hrtable_eventappointmentview {
+    padding-right: 30px;
+    float: left;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+@media (max-width:230px) {
+
+    .hrtable_eventappointmentview {
+        padding-right: 0px;
+    }
+}
+
+
+.hrtable_eventappointmentview {
+    float: left;
+    display: inline-block;
+    width: initial !important;
+}
+
+@media screen and (max-width: 1100px) {
+
+    #hrtable_eventappointmentview table {
+        margin: auto;
+    }
+}
+
+.eventtimelineShowDefaultAttachments a{
+    font-weight:bold;
+    font-size:15px;
+    color: black;
+}
+
+
+.hrWrapper {
+    padding-top: 40px;
+    padding-left:10px;
+}
+
+
+
+/* buttons kleiner machen */
+@media screen and (max-width: 525px) {
+    .hrWrapper {
+        max-width: 320px;
+        margin: auto;
+    }
+
+    #adminTable_ajax_filter {
+        visibility: hidden;
+    }
+}
+
+
+
+
+body.eventappointment-page .content-headline {
+    /*  padding-top:100px !important;*/
+}
+
+@media screen and (max-width: 800px) {
+
+    body.eventappointment-page .buttonbar {
+        float: initial;
+        padding-top:40px;
+        
+    }
+
+
+    body.eventappointment-page .headline-stickleft {
+        padding-right:15px;
+    }
+        
+    /*
+    body.eventappointment-page .headline-stickleft {
+        position: initial;
+        float: initial;
+        overflow:hidden;
+    }*/
+
+}
+
+
+
+.login_element.register_part {
+    padding-bottom: 80px;
+    margin-bottom:30px;
+    border-bottom: 1px solid black;
+}
+
+.login_formElement #Submit {
+    padding: 5pt 15pt;
+}
+
+
+div.shownonmodal .modal-body,
+div.shownonmodal .modal-content,
+div.shownonmodal .modal-footer,
+div.shownonmodal .nav-tabs {
+    border: 0 !important;
+}
+
+.modal-footer {
+}
+
+.nav-pills .nav-link {
+    background-color: #0c3d8f !important;
+    border-radius: 6pt !important;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 50px;
+}
+
+
+
+#nav {
+    box-shadow: 6px 0 18px 0 rgba(0, 0, 0, 0.06);
+    background-color: #2e3033;
+    min-height:100vw;
+}
+
+
+
+
+#nav li {
+    font-size: 13px;
+    color: white;
+    font-family: 'Nunito Sans';
+}
+
+#nav li.navelement {
+    margin-left: 27px;
+}
+
+
+
+
+#nav a {
+    font-size: 13px;
+    color: white;
+    font-family: 'Nunito Sans';
+}
+
+#nav a p {
+    font-size: 13px;
+    color: white;
+    font-family: 'Nunito Sans';
+}
+
+html > body {
+    font-family: 'Nunito Sans';
+    background-color: #F5F5F5;
+}
+
+
+    #nav li {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        /* float: left; */
+        position: relative;
+        list-style: none;
+    }
+
+
+#nav .navigationheader {
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.nav-icon_wws{
+    display:inline-block;
+    min-width:20px;
+}
+
+.navigationheader h4{
+    display:inline-block;
+    padding-left:5px;
+    font-weight:normal;
+}
+
+
+#nav .navigationheader > h4{
+    font-weight:normal;
+}
+
+
+#nav .navigationheader:after {
+    font-family: "Font Awesome 6 Free";
+    content: "\f105";
+    float: right;
+    padding-right: 20px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+
+#nav .navigationheader.opened:after {    
+    content: "\f107";
+}
+
+
+
+#nav .current a, #nav li:hover a, #nav li:hover a p, #nav .current a p {
+    background: initial;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    color: white;
+    font-weight: normal;
+    color: #209598;
+}
+
+
+    #nav .current a, #nav .current a p {
+        /*font-weight: bolder;*/
+        text-decoration:none;
+       
+    }
+
+
+.navigationheader.active h4 {
+    color: #209598;
+}
+
+.navigationheader.active i {
+    color: #209598;
+}
+
+
+.navlogo {
+    margin-right: 35px;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    padding-bottom: 40px;
+}
+
+.navigationWrapper { 
+    width: 256px;
+}
+
+#mainContentWrapper { 
+    width: calc(100% - 256px);
+    padding:0;
+}
+
+.topbarelement {
+    font-size: 15pt;
+    color: black;
+    font-weight: bold;
+}
+
+.bc_detail {
+   font-size: 12pt;
+   font-weight:bold;
+}
+
+.bc_detail > .bc_active_element {
+    color: #209598;
+    text-decoration: underline;
+    display:inline-block;
+}
+
+.rowElement #header-headline {
+    margin: 19px 0px;
+}
+
+.rowheader {
+    background-color: white;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.rowElement #AdminHeaderLogo {
+    margin-top: 20px;
+}
+
+.content-headline{
+    display:none;
+}
+
+#adminTable_ajax th{
+    background-color:white;
+}
+
+
+table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
+    background-color: #fafafa;
+
+}
+
+
+#adminTable_ajax_wrapper {
+    background-color: white;
+    margin: 15px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+}
+
+
+.bpfw-openmenu-icon:before {
+    content: "\f141"; /* ellipsis*/
+    color:grey;
+    text-align:center;
+}
+
+.open-listmenu-button{
+   
+}
+
+.list-button-tablefield .datalist_button_wrapper{
+    left:38px;
+}
+
+.datalist_button_wrapper i {
+    color: #209598;
+}
+
+.admintable, .admintable th, table.dataTable.no-footer, table.dataTable.no-footer th{
+    border-color: lightgray !important;
+}
+
+.printButton{
+    display:none !important;
+}
+
+select[name='adminTable_ajax_length'] {
+    float: right;
+    margin-left: 10px;
+    border: 0;
+    padding-top: 0;
+    color: #209598;
+}
+
+.dataTables_wrapper div.dataTables_length {
+    color: #707070;
+}
+
+/*
+#listcontent_before {
+    content: " ";
+    display: block;
+    height: 50px;
+    padding-bottom: 10px;
+    background-color: white;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    margin: 15px;
+}*/
+
+.buttonbar.buttonbar-top {
+    display: block;
+    height: 42px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    margin: 15px;
+}
+
+
+.buttonbar-top .new-entry-button, .buttonbar-top .addButton {
+    padding: 6px;
+    position: initial;
+    background-color: #209598;
+    border-radius: 5px;
+    width: initial;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+    .buttonbar-top .addButton .add-button .root_button {
+        width: initial;
+    }
+
+.buttonbar-top .new-entry-button div, .buttonbar-top .addButton div {
+    color: white !important;
+}
+
+.syncInProgressSpinner:after {
+    animation: fa-spin 2s linear infinite;
+}
+
+.buttonbar-top .addButton > div:after {
+    font-family: "Font Awesome 6 Free";
+    content: "\2b";
+    float: right;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+.buttonbar-top .addButton > div{
+  padding-right:15px;
+}
+
+.buttonbar-top .addButton  {
+      text-decoration:none;
+}
+
+
+.buttonbar-top .addButton > div.sync-button:after {
+    content: "\f021";
+}
+
+.buttonbar-top .addButton.syncButton{
+    margin-right: 10px;
+}
+
+.buttonbar-top .new-entry-button i, .buttonbar-top .addButton i {
+    color: white !important;
+    display:none;
+}
+
+#adminTable_ajax_filter {
+    margin: 0;
+    float: left;
+    width: initial;
+    position: absolute;
+    left: 0px;
+    top: -57px;
+    background-color: white;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border-radius:5px;
+}
+
+
+@media screen and (max-width: 800px) {
+    body a.button.addButton > div > div, body a.button.printButton > div > div {    
+        display:inline;
+    }
+}
+
+#adminTable_ajax_filter >label{
+    padding:0;
+    margin:0;
+}
+
+#adminTable_ajax_filter > label:before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f002";
+    padding-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 900;
+    padding-left: 20px;
+    font-size: 15pt;
+}
+
+#adminTable_ajax_filter input {
+    height: 32px;
+    width: 60vw;
+    max-width:calc(100vw - 600px) !important;
+    margin:5px;
+    margin-left: 10px;
+    border-color: white;
+    border-radius:5px;
+}
+
+@media (max-width:1100px) {
+    #adminTable_ajax_filter input {
+        max-width: calc(100vw - 410px) !important;
+    }
+
+
+    .mobileMenuOpened #adminTable_ajax_filter input {
+        max-width: calc(100vw - 610px) !important;
+    }
+
+}
+
+.usermenuContent{
+    position:absolute;
+    z-index:9999;
+    background-color:white;
+    border-radius:5px;
+    padding:10px;
+    border:1px solid lightgrey;
+    display:none;
+}
+
+.usermenuContent > a {
+    display: block;
+    text-align:left;
+    width:100%;
+    padding-left:0;
+}
+
+.openUsermenu{
+    cursor:pointer;
+    margin-top:8px;
+    font-size:12pt;
+    font-weight:normal;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+    color: #495057;
+}
+
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        color: #209598;
+        font-weight: bold;
+    }
+
+.dialogTabNavigation{
+    margin-bottom:24px;
+}
+
+.component{
+    padding-bottom:5px;
+}
+
+table.dataTable tbody td > div{
+    min-height:25px;
+    vertical-align:middle;
+    padding-top:3px;
+}
+
+body .buttonbar-afterform .btn.bpfwbutton.button, .modellistbutton {
+    padding: 6px;
+    position: initial;
+    background-color: #209598 !important;
+    border-radius: 5px;
+    width: initial;
+    padding-top: 9px;
+    padding-bottom: 7px;
+    font-size: 15pt;
+}
+
+.modellistbutton {
+    padding-top: 6px;
+    padding-bottom: 4px;
+}
+
+.modellistbutton.new-entry-button > i.topbuttonicon {
+    padding-right: 15px;
+}
+
+.modellistbutton > div{
+    padding-right:5px;
+}
+
+body .buttonbar-afterform .btn.bpfwbutton.button.btn-secondary, .modellistbutton {
+    background-color: #808080 !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+body .buttonbar-afterform .btn.bpfwbutton.button.btn-secondary:hover, .modellistbutton:hover {
+    background-color: #606060 !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+body .buttonbar-afterform .btn.bpfwbutton.button:hover, .buttonbar-top .new-entry-button:hover, .buttonbar-top .addButton:hover {
+    background-color: #007578 !important;
+}
+
+
+.buttonbar-afterform .btn i{
+    display: none;
+}
+
+.new-entry-button > i.topbuttonicon {
+    background-color: transparent !important;
+    float: right;
+    border: 0;
+    color: white;
+    padding-right: 10px;
+}
+
+.new-entry-button > i.topbuttonicon:hover{
+    background-color:transparent !important;
+}
+
+.new-entry-button:hover > i.topbuttonicon{
+     color:white;
+}
+
+.buttonbar-afterform .btn div, .new-entry-button > div, .new-entry-button > div:hover {
+    background-color: transparent !important;
+    border: none;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12pt;
+}
+
+
+
+#confirmMessageBox .new-entry-button > i.topbuttonicon {
+   display:none;
+}
+
+#confirmMessageBox .buttonbar-afterform .btn div, #confirmMessageBox .new-entry-button > div, #confirmMessageBox .new-entry-button > div:hover {
+    background-color: #209598 !important;
+    border: none;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12pt;
+    border-radius:5px;
+}
+
+#confirmMessageBox #confirmdialog_cancel div div{
+    background-color: #808080 !important;
+}
+
+
+
+.modellistbutton.new-entry-button > div {
+    padding-right: 0px;
+}
+
+.modal .buttonbar-afterform, .modal .buttonbar-afterform-wrap {
+   /* margin-right: auto;
+    margin:initial;*/
+}
+
+.modal .buttonbar-afterform-wrap {
+    /*
+    width:100vw;*/
+}
+
+.checkbox.normal_admin_form_element::before{
+    content:"";
+}
+
+.checkbox.normal_admin_form_element.checkOn {
+    margin: 5px;
+}
+
+body .button.bpfwbutton.hiddenCancel {
+    display: inline-block;
+}
+
+.admin_form_caption, .admin_form_element {
+    font-size: 1.2em;
+}
+
+.modellistbutton{
+    margin-top:0px;
+}
+
+
+
+
+@media screen and (max-width: 1100px) {
+    div .mobileHamburger {
+        top: 20px !important;
+        right:20px !important;
+        display:initial;
+        position:absolute;
+    }
+
+
+    body:not(.mobileMenuOpened) .navigationWrapper {
+        display: none;
+    }
+
+    body:not(.mobileMenuOpened) #mainContentWrapper{
+        width:100% !important;
+    }
+
+    :not(.mobileMenuOpened) .navigationWrapper h4{
+        display:initial;
+    }
+
+    div.mobileHamburger {
+        display: initial;
+        border-radius: 0;
+    }
+
+    .mobileMenuClosed .navigationWrapper {
+        max-width: initial;
+    }
+
+    body:not(.mobileMenuOpened) #mainContentWrapper {
+        width: calc( 100%  );
+    }
+}
+
+
+@media screen and (min-width: 1101px) {
+    body:not(.mobileMenuOpened) #mainContentWrapper {
+        width: calc( 100% - 256px );
+    }
+}
+@media screen and (max-width: 500px) {
+    body a.button.addButton, body a.button.printButton {
+        margin:0;
+        float:initial;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mobileMenuOpened #header-headline .topbarelement, .mobileMenuOpened .bc_active_element {
+        font-size: 0.6em !important;
+    }
+}
+
+.modellistbutton {
+    padding: 0;
+    border: 0;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 200px;
+    display: inline-block
+}
+
+
+
+
+
+body.login-page.login #mainContentWrapper{
+    width:450px;
+    border-radius:45px;
+}
+
+
+body.login-page.login #mainContentWrapper > .loginboxWrap > .login_background {
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+body.login-page.login #mainContentWrapper > .loginboxWrap > div > #header_img_login {
+  border:0;
+}
+
+body.login-page.login #mainContentWrapper > .loginboxWrap > div.logo_background {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top:30px;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+body.login-page.login #mainContentWrapper #login .input-group-addon {
+    display: none;
+}
+
+
+body.login-page.login #mainContentWrapper
+{
+    position: relative;
+    top: calc(50vh - 331px);
+}
+
+.copyright_login {
+    margin: auto;
+    color: white;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.login_background .welcome1{
+    text-align:center;
+    padding-top:15px;
+}
+
+.login_background .welcome2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+.login_background input[type='text'], .login_background input[type='password'] {
+    border-radius: 5px !important;
+    font-size: 15px;
+}
+
+.login_background .input-group label {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top:13px;
+    margin-bottom:4px;
+}
+
+.login_background .input-group:first-of-type label {
+    margin-top: 28px;
+}
+
+.login_wrapper {
+    padding-top: 0;
+    padding-bottom: 5px;
+}
+
+
+body.login-page.login #mainContentWrapper #login .login_formElement input#Submit {
+    padding: 6px;
+    position: initial;
+    background-color: #209598 !important;
+    border-radius: 5px;
+    width: initial;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 100%;
+    margin-top: 35px;
+}
+
+body .wwsbutton, .component-button .button.bpfwbutton {
+    padding: 6px;
+    position: initial;
+    background-color: #209598 !important;
+    border-radius: 5px;
+    width: initial;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+ 
+
+body .wwsbutton:hover {
+    background-color: #007578 !important;
+}
+
+body.login-page.login #mainContentWrapper #login .login_formElement input#Submit:hover {
+    background-color: #007578 !important;
+}
+
+.loginError {
+    position: relative;
+    top: -11px;
+    color: red;
+}
+
+.bpfwbutton.button.editAction{
+
+    display:none;
+
+}
+
+.datalist_button_wrapper  a{
+    font-size: 0;
+}
+.export-page .datalist_button_wrapper  a {
+    font-size: inherit;
+}
+.new-entry-button, .modellistbutton{
+    text-align: center;
+}
+
+.copyright_login a{
+    color:white;
+    text-decoration: underline;
+}

@@ -1,0 +1,2 @@
+Templatename: modern
+Author: Julius Kahlbrandt, Torsten Lüders

@@ -1,0 +1,40 @@
+﻿body {
+    font-family: Avenir;
+    font-weight: normal;
+    font-size: 10pt;
+ 
+}
+
+.cv_row{
+    padding-bottom: 5px;
+}
+
+.cv_row .cv_desc {
+    display: inline-block;
+    width: 200px;
+    color: #808080;
+    float: left;
+}
+
+.cv_row .cv_content {
+    display: inline-block;
+    float: left;
+}
+
+.cv_row .cv_content p {
+    padding: 0;
+    margin: 0;
+}
+
+.main{
+    padding-top:20px;
+}
+
+.profile_pic{
+    max-height:300px;
+}
+
+.detailinfo_education_experience{
+    font-size:0.9em;
+    font-weight:normal;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "vojtys/croppie",
+  "description": "Croppie (Foliotek/Croppie) for Nette - Forms",
+  "type": "library",
+  "license": [
+    "BSD-3-Clause"
+  ],
+  "homepage": "https://github.com/vojtys/croppie",
+  "authors": [
+    {
+      "name": "Vojtěch Sedláček"
+    }
+  ],
+  "suggest": {
+    "ext-openssl": "To make requests via https"
+  },
+  "require": {
+    "php": ">=7.1",
+    "nette/di": "^3.0",
+    "nette/application": "^3.0",
+    "nette/forms": "^3.0",
+    "nette/utils": "^3.0"
+  },
+  "require-dev": {
+    "nette/tester": "~1.4.0"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  },
+  "config": {
+    "vendor-dir": "vendor"
+  }
+}

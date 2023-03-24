@@ -1,0 +1,78 @@
+﻿<html>
+
+<head>
+    <style>
+        {{{common/pdfstyles}}}
+    </style>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+
+
+<div class="main">
+    <div class="letter_header_right">
+        <br /><br /><br />
+    </div>
+    <table width="100%" cellpadding="10">
+        <tr>
+            <td class="letter_header_left"  width="60%" style="border: 0mm solid #888888; ">
+                <span class="letter_header_left_sender"  style="">Example Company · Examplestreet. 123 · 12345 Testtown</span>
+                <br />
+                {{{rcpt.company}}}<br />
+                {{{rcpt.salutation_n}}} {{{rcpt.firstname}}} {{{rcpt.lastname}}}<br />
+                {{{rcpt.street}}}<br />
+                {{{rcpt.zip}}} {{{rcpt.city}}}</td>
+
+            <td width="6.75%">&nbsp;</td>
+
+            <td class="letter_header_right" width="33.25%" style="border: 0mm solid #888888;">
+                Example Company<br />
+                Examplestreet. 123<br /> 12345 Testtown<br /><br />
+                <table border="0" cellspacing="0" cellpadding="0"  class="letter_header_right">
+                    <tbody>
+                    <tr>
+                        <td>Phone:&nbsp;</td>
+                        <td>(1234) 1234 1234&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>E-Mail:&nbsp;</td>
+                        <td>mail@mycompany.org&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Web:&nbsp;</td>
+                        <td>www.testcompany.de&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td width="60%">&nbsp;</td>
+            <td width="7%">&nbsp;</td>
+            <td width="33%" class="letter_textbody">{{{currentDate}}}&nbsp;</td>
+        </tr>
+    </table>
+
+    <style>
+
+        .mailtext_body{
+        }
+
+
+        #mailcontent-footer{
+            display:none;
+        }
+
+
+    </style>
+
+    <div class="letter_textbody mailtext_body" style="padding:30px;">
+
+        {{{invoiceContent}}}
+
+    </div>
+
+
+</body>
+</html>

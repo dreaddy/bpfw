@@ -1,0 +1,72 @@
+
+.loadingScreen
+{
+    position:absolute;
+    top:0px;
+    width:100%;
+    height:100%;
+    z-index:10;
+    background-color:rgba(255,255,255,0.7);
+    text-align:center;
+                
+}
+
+.ajax-list
+{
+    /*min-height:200px;*/
+    min-height:50px;
+}
+
+ul .loadingScreen i{
+    /*margin-top: 25%;*/
+    /*margin-top:25px;*/
+    font-size: 75px;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top:-33px;
+}
+
+
+.loadingScreenWrapper
+{
+    position:relative;               
+}
+
+.paging_simple_numbers li,
+.paging_simple_numbers li>a
+{
+                
+}
+
+ul .loadingScreen
+{
+    display:none;
+}
+
+.color-white,
+.color-white a
+{
+    color:white;
+}
+
+#call-for-tender-history-count-label
+{
+    font-weight:normal;
+}
+
+.dataTables_info{
+    background-color:#FFF;
+	font-family: 'Open Sans', sans-serif;
+	font-size:13px;
+	font-weight:600; 
+	color:#767676;	
+	padding-top:18px; 
+    padding-left:2px;
+	overflow-x: hidden;
+}
+
+.ajax-list .list-group-item{
+    border-radius:0px;
+}

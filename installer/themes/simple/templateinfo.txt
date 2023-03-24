@@ -1,0 +1,2 @@
+Templatename: simple
+Author: Torsten Lüders

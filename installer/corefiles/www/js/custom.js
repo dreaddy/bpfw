@@ -1,0 +1,1 @@
+/* example js. Add your global js functions and classes here */

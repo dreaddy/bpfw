@@ -1,0 +1,2 @@
+Templatename: business
+Author: Julius Kahlbrandt, Torsten Lüders

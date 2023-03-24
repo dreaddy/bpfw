@@ -1,0 +1,1615 @@
+@CHARSET "utf-8";
+
+* {
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* nunito-sans-regular - latin */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nunitosans/nunito-sans-v6-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''), url('../fonts/nunitosans/nunito-sans-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/nunitosans/nunito-sans-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/nunitosans/nunito-sans-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/nunitosans/nunito-sans-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/nunitosans/nunito-sans-v6-latin-regular.svg#NunitoSans') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: normal;
+    src: local(''), url('../fonts/cairo/Cairo-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Cairo ExtraLight';
+    font-style: normal;
+    font-weight: normal;
+    src: local(''), url('../fonts/cairo/Cairo-ExtraLight.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Cairo Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local(''), url('../fonts/cairo/Cairo-Light.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Cairo';
+    font-weight: bold;
+    src: local(''), url('../fonts/cairo/Cairo-SemiBold.woff') format('ttf');
+}
+
+
+@font-face {
+    font-family: 'Cairo';
+    font-weight: 900;
+    src: local(''), url('../fonts/cairo/Cairo-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Cairo';
+    font-weight: 700;
+    src: local(''), url('../fonts/cairo/Cairo-Bold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Cairo Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local(''), url('../fonts/cairo/Cairo-Black.woff') format('woff');
+}
+
+.hrtable_eventappointmentview {
+    padding-right: 30px;
+    float: left;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+@media (max-width:230px) {
+
+    .hrtable_eventappointmentview {
+        padding-right: 0px;
+    }
+}
+
+
+.hrtable_eventappointmentview {
+    float: left;
+    display: inline-block;
+    width: initial !important;
+}
+
+@media screen and (max-width: 1100px) {
+
+    #hrtable_eventappointmentview table {
+        margin: auto;
+    }
+}
+
+.eventtimelineShowDefaultAttachments a{
+    font-weight:bold;
+    font-size:15px;
+    color: black;
+}
+
+
+.hrWrapper {
+    padding-top: 40px;
+    padding-left:10px;
+}
+
+
+
+/* buttons kleiner machen */
+@media screen and (max-width: 525px) {
+    .hrWrapper {
+        max-width: 320px;
+        margin: auto;
+    }
+
+    #adminTable_ajax_filter {
+        visibility: hidden;
+    }
+}
+
+
+
+
+body.eventappointment-page .content-headline {
+    /*  padding-top:100px !important;*/
+}
+
+@media screen and (max-width: 800px) {
+
+    body.eventappointment-page .buttonbar {
+        float: initial;
+        padding-top:40px;
+
+    }
+
+
+    body.eventappointment-page .headline-stickleft {
+        padding-right:15px;
+    }
+
+    /*
+    body.eventappointment-page .headline-stickleft {
+        position: initial;
+        float: initial;
+        overflow:hidden;
+    }*/
+
+}
+
+
+
+.login_element.register_part {
+    padding-bottom: 80px;
+    margin-bottom:30px;
+    border-bottom: 1px solid black;
+}
+
+.login_formElement #Submit {
+    padding: 5pt 15pt;
+}
+
+
+div.shownonmodal .modal-body,
+div.shownonmodal .modal-content,
+div.shownonmodal .modal-footer,
+div.shownonmodal .nav-tabs {
+    border: 0 !important;
+}
+
+.modal-footer {
+}
+
+.nav-pills .nav-link {
+    background-color: #0c3d8f !important;
+    border-radius: 6pt !important;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 50px;
+}
+
+
+
+#nav {
+    box-shadow: none;
+    background-color: #FFFFFF;
+    min-height:100vw;
+}
+
+
+.nav-link {
+    border: 0 !important;
+}
+
+.nav-link.active {
+    border-bottom: 3px solid #5BCFC5 !important;
+}
+
+#nav li {
+    font-size: 17px;
+    color: #969BA0;
+    font-family: 'Cairo';
+}
+
+#nav li.navelement {
+    margin-left: 41px;
+}
+
+#nav li.navelement[data-category='single'] {
+    margin-left: 0px;
+}
+
+#collectionSelector{
+    font-size:14px;
+    padding-left:12px;
+}
+
+#nav a {
+    font-size: 16px;
+    color: #969BA0;
+    font-family: 'Cairo';
+}
+
+#nav a p {
+    font-size: 16px;
+    color: #969BA0;
+    font-family: 'Cairo';
+}
+
+html > body {
+    font-family: 'Cairo';
+    background-color: #F5F5F5;
+}
+
+
+#nav li {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* float: left; */
+    position: relative;
+    list-style: none;
+}
+
+
+#nav .navigationheader {
+    cursor: pointer;
+}
+
+.nav-icon_wws{
+    display:inline-block;
+    min-width:20px;
+}
+
+.navigationheader h4{
+    display:inline-block;
+    padding-left:5px;
+    font-weight:normal;
+}
+
+
+#nav .navigationheader > h4 {
+    font-weight: normal;
+}
+
+
+#nav .navigationheader[data-link='']:after {
+    font-family: "Font Awesome 6 Free";
+    content: "\f0da";
+    float: right;
+    padding-right: 20px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+.navcategorywrap.active_collection_wrap {
+    border: 1px solid #E8EBEA;
+    border-radius: 25px;
+    margin-top: 30px;
+}
+.navcategorywrap.active_collection_wrap p{
+    text-align:center;
+    color:black;
+    font-weight:bold;
+    margin-bottom:0;
+}
+
+.navcategorywrap.active_collection_wrap select#collectionSelector {
+    border-color: transparent;
+    color: #8F8F8F;
+    border-radius: 5px;
+}
+
+.navcategorywrap {
+    margin: 15px;
+    padding: 7px;
+}
+
+.navcategorywrap.active {
+    background-color: #F6F6F6;
+    border-radius:25px;
+}
+
+
+#nav .navigationheader.opened:after {
+    content: "\f0d8";
+}
+
+.navigationheader.active h4 {
+    color: #5BCFC5;
+    font-weight: 900;
+    font-weight: bolder !important;
+
+}
+
+.navigationheader.active i {
+    color: #5BCFC5;
+}
+
+.navigationheader h4 {
+    line-height: 25px;
+    font-size: 16px !important;
+    vertical-align: middle;
+}
+
+.navigationheader.active i {
+
+}
+
+.navigationheader i {
+    font-size:20px !important;
+    margin-right:13px;
+}
+/* main menu styles */
+#nav {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.contentWrapper {
+    border-bottom: 0;
+}
+
+
+#nav .current a, #nav li:hover a, #nav li:hover a p, #nav .current a p {
+    background: initial;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    color: black;
+    font-weight: normal;
+    color: black;
+}
+
+
+#nav .current a, #nav .current a p {
+    /*font-weight: bolder;*/
+    text-decoration:none;
+    font-weight:700;
+}
+
+
+#collectionSelector {
+    width: 100%;
+    color: black;
+    border-color: #969BA0;
+}
+
+
+
+.navlogo {
+    margin-left: 45px;
+    margin-top: 41px;
+    margin-bottom: 0px;
+}
+
+.navigationWrapper {
+    width: 328px;
+    padding: 16px;
+}
+
+#nav {
+    border-radius: 25px;
+    box-shadow:none;
+}
+
+#mainContentWrapper {
+    width: calc(100% - 328px);
+    padding: 0;
+    border-radius: 25px;
+}
+
+.model-BpfwEmptyModel #mainContentWrapper
+{
+    padding-top:30px;
+    padding-left:30px;
+}
+
+#customcontent{
+
+}
+
+.topbarelement {
+    font-size: 15pt;
+    color: black;
+    font-weight: bold;
+}
+
+.bc_detail {
+    font-size: 12pt;
+    font-weight:bold;
+}
+
+.bc_detail > .bc_active_element {
+    color: #5BCFC5;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.rowElement #header-headline {
+    margin: 19px 0px;
+}
+
+.rowheader {
+    background-color: white;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display:none;
+}
+
+.rowElement #AdminHeaderLogo {
+    margin-top: 20px;
+}
+
+.content-headline{
+    display:none;
+}
+
+#adminTable_ajax th{
+    background-color:white;
+}
+
+
+table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
+    background-color: #fafafa;
+
+}
+
+
+#adminTable_ajax_wrapper {
+    background-color: white;
+    margin: 15px;
+    margin-top:17px;
+    box-shadow:none;
+    /*box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);*/
+    border-radius: 25px;
+}
+
+.open-listmenu-button{
+    text-align:center;
+}
+
+.bpfw-openmenu-icon:before {
+    content: "\f142"; /* ellipsis*/
+    color: grey;
+    text-align: center;
+}
+
+.open-listmenu-button{
+
+}
+
+.list-button-tablefield .datalist_button_wrapper{
+    left:38px;
+}
+
+.datalist_button_wrapper i {
+    color: #5BCFC5;
+}
+
+.admintable, .admintable th, table.dataTable.no-footer, table.dataTable.no-footer th{
+    border-color: lightgray !important;
+}
+
+.printButton{
+    display:none !important;
+}
+
+select[name='adminTable_ajax_length'] {
+    float: right;
+    margin-left: 10px;
+    border: 0;
+    padding-top: 0;
+    color: #5BCFC5;
+    position: relative;
+    top: -3px;
+}
+
+
+.dataTables_wrapper div.dataTables_length {
+    color: #707070;
+}
+
+/*
+#listcontent_before {
+    content: " ";
+    display: block;
+    height: 50px;
+    padding-bottom: 10px;
+    background-color: white;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    margin: 15px;
+}*/
+
+.buttonbar.buttonbar-top {
+    display: block;
+    height: 42px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    margin: 15px;
+}
+
+
+.buttonbar-top .new-entry-button, .buttonbar-top .addButton {
+    padding: 6px;
+    padding-top:02px;
+    position: initial;
+    background-color: #5BCFC5;
+    border-radius: 25px;
+    width: initial;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.buttonbar-top .new-entry-button:after, .buttonbar-top .addButton:after{
+    padding-top:2px;
+}
+
+.buttonbar-top .addButton .add-button .root_button {
+    width: initial;
+}
+
+.buttonbar-top .new-entry-button div, .buttonbar-top .addButton div {
+    color: white !important;
+}
+
+.syncInProgressSpinner:after {
+    animation: fa-spin 2s linear infinite;
+}
+
+.buttonbar-top .addButton > div:after {
+    font-family: "Font Awesome 6 Free";
+    content: "\2b";
+    float: right;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 900;
+}
+
+.buttonbar-top .addButton > div{
+    padding-right:15px;
+}
+
+.buttonbar-top .addButton  {
+    text-decoration:none;
+}
+
+
+.buttonbar-top .addButton > div.sync-button:after {
+    content: "\f021";
+}
+
+.buttonbar-top .addButton > div.delete-button:after {
+    content: "\f1f8";
+}
+
+.buttonbar-top .addButton.syncButton{
+    margin-right: 10px;
+}
+
+.buttonbar-top .new-entry-button i, .buttonbar-top .addButton i {
+    color: white !important;
+    display:none;
+}
+
+#adminTable_ajax_filter {
+    margin: 0;
+    float: left;
+    width: initial;
+    position: absolute;
+    left: 0px;
+    top: -57px;
+    background-color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+@media screen and (max-width: 800px) {
+    body a.button.addButton > div > div, body a.button.printButton > div > div {
+        display:inline;
+    }
+}
+
+#adminTable_ajax_filter > label {
+    padding: 0;
+    margin: 0;
+    color: #757575;
+    font-size:10pt;
+    font-weight:bold;
+}
+
+#adminTable_ajax_filter > label:before {
+    font-family: "Font Awesome 6 Free";
+    content: "";
+    padding-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 900;
+    padding-left: 20px;
+    font-size: 15pt;
+}
+
+#adminTable_ajax_filter input {
+    height: 32px;
+    width: 60vw;
+    max-width:calc(100vw - 700px) !important;
+    margin:5px;
+    margin-left: 10px;
+    border-color: white;
+    border-radius:5px;
+    outline:none;
+}
+
+@media (max-width:1100px) {
+
+    #adminTable_ajax_filter input {
+        max-width: calc(100vw - 410px) !important;
+    }
+
+    .mobileMenuOpened #adminTable_ajax_filter input {
+        max-width: calc(100vw - 610px) !important;
+    }
+
+}
+
+.usermenuContent{
+    position:absolute;
+    z-index:9999;
+    background-color:white;
+    border-radius:5px;
+    padding:10px;
+    border:1px solid lightgrey;
+    display:none;
+}
+
+.usermenuContent > a {
+    display: block;
+    text-align:left;
+    width:100%;
+    padding-left:0;
+}
+
+.openUsermenu{
+    cursor:pointer;
+    margin-top:8px;
+    font-size:12pt;
+    font-weight:normal;
+}
+
+.modal-header{
+    border:0;
+    padding-bottom:0;
+}
+
+.modal-footer{
+    padding-top:0;
+    border:0;
+}
+
+.modal-header h5#ModalLongTitle {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 48px;
+    padding-top: 10px !important;
+    padding-bottom: 0px !important;
+    padding-left: 14px !important;
+}
+
+div > div > div.modal-header > button{
+    padding-right:23px;
+    font-weight:normal;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+    color: #495057;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #5BCFC5;
+    font-weight: bold;
+}
+
+.dialogTabNavigation{
+    margin-bottom:24px;
+}
+
+.component{
+    padding-bottom:5px;
+}
+
+table.dataTable tbody td > div{
+    min-height:25px;
+    vertical-align:middle;
+    padding-top:3px;
+}
+
+body .buttonbar-afterform .btn.bpfwbutton.button, .modellistbutton {
+    padding: 6px;
+    position: initial;
+    background-color: #5BCFC5 !important;
+    border-radius: 25px;
+    width: initial;
+    padding-top: 9px;
+    padding-bottom: 7px;
+    font-size: 15pt;
+}
+
+.modellistbutton {
+    padding-top: 6px;
+    padding-bottom: 4px;
+}
+
+.modellistbutton.new-entry-button > i.topbuttonicon {
+    padding-right: 15px;
+}
+
+.modellistbutton > div{
+    padding-right:5px;
+}
+
+body .buttonbar-afterform .btn.bpfwbutton.button.btn-secondary, .modellistbutton {
+    background-color: #808080 !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+body .buttonbar-afterform .btn.bpfwbutton.button.btn-secondary:hover, .modellistbutton:hover {
+    background-color: #606060 !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+body .buttonbar-afterform .btn.bpfwbutton.button:hover, .buttonbar-top .new-entry-button:hover, .buttonbar-top .addButton:hover {
+    background-color: #007578 !important;
+}
+
+
+.buttonbar-afterform .btn i{
+    display: none;
+}
+
+.new-entry-button > i.topbuttonicon {
+    background-color: transparent !important;
+    float: right;
+    border: 0;
+    color: white;
+    padding-right: 10px;
+}
+
+.new-entry-button > i.topbuttonicon:hover{
+    background-color:transparent !important;
+}
+
+.new-entry-button:hover > i.topbuttonicon{
+    color:white;
+}
+
+.buttonbar-afterform .btn div, .new-entry-button > div, .new-entry-button > div:hover {
+    background-color: transparent !important;
+    border: none;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12pt;
+}
+
+
+
+#confirmMessageBox .new-entry-button > i.topbuttonicon {
+    display:none;
+}
+
+#confirmMessageBox .buttonbar-afterform .btn div, #confirmMessageBox .new-entry-button > div, #confirmMessageBox .new-entry-button > div:hover {
+    background-color: #5BCFC5 !important;
+    border: none;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12pt;
+    border-radius: 25px;
+}
+
+#confirmMessageBox #confirmdialog_cancel > div > div{
+    background-color: #808080 !important;
+}
+
+#confirmMessageBox #confirmdialog_cancel > div > div {
+    padding: 10px inherit;
+}
+
+.modellistbutton.new-entry-button > div {
+    padding-right: 0px;
+}
+
+.modal .buttonbar-afterform, .modal .buttonbar-afterform-wrap {
+    margin-right: auto;
+    margin:initial;
+}
+
+.modal .buttonbar-afterform-wrap {
+    /*
+    width:100vw;*/
+}
+
+.checkbox.normal_admin_form_element::before{
+    content:"";
+}
+
+.checkbox.normal_admin_form_element.checkOn {
+    margin: 5px;
+}
+
+body .button.bpfwbutton.hiddenCancel {
+    display: inline-block;
+}
+
+.admin_form_caption, .admin_form_element {
+    font-size: 1.2em;
+}
+
+.modellistbutton{
+    margin-top:0px;
+}
+
+
+.token-page .previewImage {
+    border-radius: 15px;
+    padding-top: 0;
+    margin-top: 10px;
+    margin-bottom:10px;
+    width:70px;
+}
+
+.token-page .previewImage.img_disabled {
+    /*        width: 310px;*/
+    height: initial;
+    width: initial;
+    min-height:300px;
+    max-height:500px;
+}
+
+#adminTable_ajax_filter {
+    border-radius: 19px;
+}
+
+@media screen and (max-width: 1100px) {
+    div .mobileHamburger {
+        top: 25px !important;
+        left:25px !important;
+        display:initial;
+        position:absolute;
+        z-index:900;
+    }
+
+    body:not(.mobileMenuOpened) #adminTable_ajax_filter{
+        margin-left:60px;
+    }
+
+
+    body:not(.mobileMenuOpened) .navigationWrapper {
+        display: none;
+    }
+
+    body:not(.mobileMenuOpened) #mainContentWrapper{
+        width:100% !important;
+    }
+
+    :not(.mobileMenuOpened) .navigationWrapper h4{
+        display:initial;
+    }
+
+    div.mobileHamburger {
+        display: initial;
+        border-radius: 0;
+        width:36px;
+    }
+
+    .mobileMenuClosed .navigationWrapper {
+        max-width: initial;
+    }
+
+    body:not(.mobileMenuOpened) #mainContentWrapper {
+        width: calc( 100%  );
+    }
+}
+
+
+@media screen and (min-width: 1101px) {
+    body:not(.mobileMenuOpened) #mainContentWrapper {
+        width: calc( 100% - 328px );
+    }
+}
+@media screen and (max-width: 500px) {
+    body a.button.addButton, body a.button.printButton {
+        margin:0;
+        float:initial;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mobileMenuOpened #header-headline .topbarelement, .mobileMenuOpened .bc_active_element {
+        font-size: 0.6em !important;
+    }
+}
+
+.modellistbutton {
+    padding: 0;
+    border: 0;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 200px;
+    display: inline-block
+}
+
+
+body.login-page.login{
+
+}
+
+.copyright_login a{
+    color:white;
+    text-decoration: underline;
+}
+
+body.login-page.login #mainContentWrapper{
+    width:450px;
+    border-radius:45px;
+}
+
+
+body.login-page.login #mainContentWrapper > .loginboxWrap > .login_background {
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+body.login-page.login #mainContentWrapper > .loginboxWrap > div > #header_img_login {
+    border:0;
+}
+
+body.login-page.login #mainContentWrapper > .loginboxWrap > div.logo_background {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top:30px;
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+body.login-page.login #mainContentWrapper #login .input-group-addon {
+    display: none;
+}
+
+
+body.login-page.login #mainContentWrapper
+{
+    position: relative;
+    top: calc(50vh - 331px);
+}
+
+.copyright_login {
+    margin: auto;
+    color: white;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.login_background .welcome1{
+    text-align:center;
+    padding-top:15px;
+}
+
+.login_background .welcome2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+.login_background input[type='text'], .login_background input[type='password'] {
+    border-radius: 5px !important;
+    font-size: 15px;
+}
+
+.login_background .input-group label {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top:13px;
+    margin-bottom:4px;
+}
+
+.login_background .input-group:first-of-type label {
+    margin-top: 28px;
+}
+
+.login_wrapper {
+    padding-top: 0;
+    padding-bottom: 5px;
+}
+
+
+body.login-page.login #mainContentWrapper #login .login_formElement input#Submit {
+    padding: 6px;
+    position: initial;
+    background-color: #5BCFC5 !important;
+    border-radius: 25px;
+    width: initial;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 100%;
+    margin-top: 35px;
+}
+
+body .wwsbutton, .component-button .button.bpfwbutton {
+    padding: 6px;
+    position: initial;
+    background-color: #5BCFC5 !important;
+    border-radius: 25px;
+    width: initial;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+body .wwsbutton:hover {
+    background-color: #007578 !important;
+}
+
+body.login-page.login #mainContentWrapper #login .login_formElement input#Submit:hover {
+    background-color: #007578 !important;
+}
+
+.loginError {
+    position: relative;
+    top: -11px;
+    color: red;
+}
+
+.bpfwbutton.button.editAction{
+
+    display:none;
+
+}
+
+.copypaste_link a, .copypaste_link {
+    color: #5BCFC5;
+    width: 600px;
+}
+
+.item-page table .previewImage,
+.unique-page table .previewImage {
+    width: 75px;
+}
+
+.inner_list_wrap {
+    padding: 10px 5px;
+    margin: 10px 5px;
+    float:left;
+}
+
+.showAsOwner, .showAsNonOwner{
+    display:none;
+}
+
+#info_messages {
+    position: absolute;
+    color: red;
+    font-weight: bold;
+    padding: 15px;
+    left: 0;
+    top: 15px;
+    width: 100vw;
+    text-align: center;
+    font-size:16px;
+}
+
+.admin_form_caption_text{
+    font-weight:bold;
+}
+
+.admin_form_caption, .admin_form_element {
+    display: block;
+    width: 100%;
+}
+
+.form_position_left, .form_position_right{
+    width:50%;
+}
+
+input[type=file]::file-selector-button, .button.snipButton {
+    padding: 10px;
+    position: initial;
+    background-color: #5BCFC5;
+    border-radius: 25px;
+    width: initial;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    line-height: 20px;
+    font-size: initial;
+}
+
+input[type=file]::file-selector-button {
+    display: block;
+    margin:auto;
+
+}
+
+input[type=file]::-ms-browse{
+    background-color:red;
+    color:green;
+}
+
+input[type=file] {
+    text-align: center;
+    margin: auto;
+    display: block;
+    padding-top: 10px;
+    line-height: 34px;
+    padding-right: 10px !important;
+    font-size:0;
+    height:50px;
+    /* padding-left: calc( 50% - 64px ) !important; */
+}
+
+.button.snipButton {
+    margin-left: calc( 50% - 100px ) !important;
+    min-width: 200px !important;
+    text-align: center;
+}
+
+input[type=file]::file-selector-button {
+    /*text-align: center;
+    margin: auto;*/
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color: #007578 !important;
+}
+
+.button.snipButton {
+    background-color: #808080 !important;
+    font-size: 1.2em !important;
+}
+
+body .imagecomponent_wrapper > div {
+    background-color: #F1F1F1;
+    border: 1px dashed black;
+}
+
+body .component_wrapper_modellist .modellistbutton {
+    background-color: white !important;
+}
+
+
+
+body .component_wrapper_modellist .modellistbutton div {
+    width: 70px;
+    text-align: center;
+    padding: 0;
+    color: inherit;
+}
+
+body .component_wrapper_modellist .modellistbutton.new-entry-button div, body .component_wrapper_modellist .modellistbutton.new-entry-button {
+    width: 150px;
+}
+
+
+body .component_wrapper_modellist .modellistbutton div:hover {
+    color: inherit;
+}
+
+body .component_wrapper_modellist .modellistbutton {
+    border: 1px solid #5BCFC5;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+    color: #5BCFC5;
+    margin-right:10px;
+}
+
+body .component_wrapper_modellist .modellistbutton:hover {
+    border: 1px solid #007578;
+    color: #007578 !important;
+}
+
+body .component_wrapper_modellist .modellistbutton i {
+    display: none;
+}
+
+.nav.singlePage{
+
+    display:block;
+
+}
+
+
+.nav.singlePage .form_position_left{
+
+    padding-left:0;
+
+}
+
+.nav.singlePage .form_position_right {
+    padding-right:5px;
+}
+
+
+.nav.singlePage .tab-pane >div {
+    padding-top: 15px;
+}
+
+
+.modellistbutton {
+    margin-top: 10px;
+}
+
+.bootstrap_admin_form_element {
+    width: 100% !important;
+
+}
+
+.component input, .component textarea, .checkbox.normal_admin_form_element {
+    margin-left: 0;
+}
+
+
+.admin_form_caption {
+    padding-left: 0px;
+    padding-bottom: 3px;
+}
+
+.component_wrapper_image > span > div{
+    width:100%;
+}
+
+.downloadAttachmentButton {
+    margin:0;
+    margin-bottom:5px;
+}
+
+
+.tnft_list i::before {
+    padding-right: 20px;
+    color: #5BCFC5;
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.tnft_list i.fa-circle-xmark::before {
+    color: #CA2222;
+}
+
+.tnft_list i {
+    color: black !important;
+}
+
+.tnft_list {
+    display: inline-block;
+}
+
+.tnft_list ul {
+    border: 1px solid #969BA0;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 0;
+    list-style: none;
+}
+
+
+.tnft_list li {
+    border-bottom: 1px solid #969BA0;
+    width: 100%;
+    padding: 10px;
+}
+
+.tnft_list li:last-of-type {
+    border: 0;
+}
+
+.tnft_list ul {
+    width: 600px !important;
+    margin-right: 50px !important;
+    vertical-align: top;
+}
+
+.halfsize_content {
+    width: 600px !important;
+    margin-right: 50px !important;
+    vertical-align: top;
+    display:inline-block;
+}
+
+#networkselector, #SmartContractAdress {
+    width: 600px;
+    padding: 10px 5px;
+    margin-top: 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+.halfsize_content h3 {
+    font-size: 18px;
+    font-weight: 800;
+    padding-top: 28px;
+}
+
+.halfsize_content h6{
+    font-weight:bolder;
+}
+
+.halfsize_content input {
+    min-width: 300px;
+    padding: 10px 5px;
+    margin-top: 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+
+.halfsize_content button {
+    color: #5BCFC5;
+    background-color: white;
+    border: 0;
+    border-radius: 25px;
+    padding: 10px 70px;
+    border: 1px solid #5BCFC5;
+}
+
+.halfsize_content button.main_button{
+    color: white;
+    background-color: #5BCFC5;
+    border: 0;
+    border-radius: 25px;
+    padding: 10px 70px;
+}
+
+
+
+html body .connect, html body #deploybutton {
+    border-radius: 25px;
+    padding: 10px 70px;
+    background-color: white;
+    color: white;
+    background-color: #5BCFC5;
+    border:0;
+}
+
+html body #deploybutton {
+    color: white;
+    background-color: #5BCFC5;
+    border: 0;
+}
+
+html body .connect{
+    margin-bottom:5px;
+    display:inline-block;
+}
+
+input {
+    border: 1px solid rgb(118, 118, 118);
+    padding-left:10px !important;
+}
+
+.dashed_box {
+    border: 1px dashed black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width:100%;
+    margin-left:0;
+}
+
+.currency_display {
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    padding-right:13px;
+    padding-bottom:20px;
+}
+
+.currency_display{
+    display:inline-block;
+}
+
+.dashed_box h3
+{
+    padding-top:0;
+}
+
+
+.model-BpfwEmptyModel h1 {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 60px;
+    color: #5BCFC5;
+}
+
+
+#nav .active_collection_li{
+    margin:0;
+}
+
+.model-BpfwEmptyModel .buttonbar-top {
+    display: none !important;
+}
+
+
+#adminTable_ajax_wrapper {
+    padding: 40px;
+    box-shadow: 0px 12px 23px rgba(62, 73, 84, 0.04);
+}
+
+#navigationWrapper {
+    box-shadow: 0px 12px 23px rgba(62, 73, 84, 0.04);
+}
+
+#adminTable_ajax_filter > label {
+    padding-left: 7px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background-color: transparent !important;
+    background: none;
+    border: 1px solid transparent !important;
+    color: #5BCFC5 !important;
+    font-weight: 800;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: transparent !important;
+    background: none !important;
+    border: 1px solid transparent !important;
+    color: #007578 !important;
+    font-weight: 800;
+}
+
+.copypaste_link {
+    border: 1px solid #969BA0;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding-right: 50px;
+    font-size: 0.8em;
+}
+
+.copy_whitelisturl {
+    position: relative;
+    left: -30px;
+    cursor: pointer;
+}
+
+
+.tnft_list ul li div{
+    display:inline-block;
+}
+
+
+.tnft_list ul li .col1 {
+    text-align:left;
+}
+
+
+.tnft_list ul li .col2 {
+    float:right;
+    font-weight:bold;
+    font-size:1.3em;
+    margin-right:17px;
+    min-width:200px;
+    text-align:right;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #5BCFC5;
+    border-color: #5BCFC5;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #007578;
+    border-color: #007578;
+}
+
+
+#mainContentWrapper li a {
+    color: initial;
+}
+
+#mainContentWrapper a:hover {
+    color: #007578;
+}
+
+.metadatahosting-page #mainContentWrapper button {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 25px;
+
+}
+
+.metadatahosting-page #mainContentWrapper button:hover {
+    background-color: #007578
+}
+
+
+.field_quickupload.component-quickupload {
+    /*display: none !important;*/
+    border: 0 !important;
+}
+
+
+
+.modal-content{
+    border-radius:25px;
+}
+
+#adminTable_ajax th {
+    font-weight:800;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, .url_box b, .expert_tip_outer b {
+    font-weight: 800;
+}
+
+.url_box.haftsize_box{
+    padding-top:24px;
+}
+
+.navigationWrapper > #nav {
+    position: fixed;
+    width: 315px !important;
+}
+.navigationWrapper, .navigationWrapper > #nav {
+    overflow:auto;
+    height:calc(100vh);
+}
+
+
+.tableicon_size .tableicon {
+    font-size: 1rem !important;
+    margin-left:10px;
+    display:block;
+    text-align:left;
+    padding:5px;
+    font-weight:500;
+}
+
+select {
+
+}
+
+.tableicon_size .tableicon:hover {
+    color: #007578 !important;
+}
+
+
+.tableicon_size .tableicon:before {
+    font-size: 1.3rem !important;
+    display: none;
+}
+
+
+#adminTable_ajax_wrapper .tableicon_size .tableicon{
+    font-size: 1rem !important;
+}
