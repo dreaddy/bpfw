@@ -15,7 +15,7 @@ PDF Creation, User and rights management, l18n, Flexible and nested CRUD lists a
 **Installation in a nutshell**
 (for more details visit https://bpfw.org/getting-started)
 
-1. composer require~~~~ bpfw/bpfw
+1. composer require bpfw/bpfw
 2. Create an empty database 
 3. Create an index.php in your root folder and add require_once("vendor/bpfw/bpfw/use_bpfw.inc.php"); 
 4. Open the index.php with your browser and install bpfw with the Installer 
