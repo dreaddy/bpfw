@@ -22,4 +22,4 @@ PDF Creation, User and rights management, l18n, Flexible and nested CRUD lists a
 
 **More Infos**
 
-For more informations, documentation tutorials and support visit https://bpfw.org
+For more information, documentation, tutorials and support visit https://bpfw.org
