@@ -218,10 +218,10 @@ class MaileroutboxModel extends BpfwModel
      * Summary of createMail
      * @param string $subject
      * @param string $text
-     * @param BpfwMailAddress $to
-     * @param null $cc
-     * @param null $bcc
-     * @param null $from
+     * @param BpfwMailAddress[]|BpfwMailAddress $to
+     * @param BpfwMailAddress[]|BpfwMailAddress|null $cc
+     * @param BpfwMailAddress[]|BpfwMailAddress|null $bcc
+     * @param BpfwMailAddress|null $from
      * @param BpfwMailAttachmentInterface[] $attachments
      * @param bool $sendDirectly
      * @param boolean $debug
@@ -229,12 +229,8 @@ class MaileroutboxModel extends BpfwModel
      * @return bool
      * @throws \PHPMailer\PHPMailer\Exception
      * @throws Exception
-     * @throws Exception
-     * @throws Exception
-     * @throws Exception
-     * @throws Exception
      */
-    function createMail(string $subject, string $text, BpfwMailAddress $to, $cc = null, $bcc = null, $from = null, array $attachments = array(), bool $sendDirectly = true, bool $debug = false, bool $testmode = false): bool
+    function createMail(string $subject, string $text, BpfwMailAddress|array $to, BpfwMailAddress|array $cc = null, BpfwMailAddress|array $bcc = null, BpfwMailAddress $from = null, array $attachments = array(), bool $sendDirectly = true, bool $debug = false, bool $testmode = false): bool
     {
 
         if (empty($from)) {
@@ -316,7 +312,6 @@ class MaileroutboxModel extends BpfwModel
     /**
      * @throws \PHPMailer\PHPMailer\Exception
      * @throws Exception
-     * @throws Exception
      */
     function sendMails($amount): bool|string
     {
@@ -348,7 +343,7 @@ class MaileroutboxModel extends BpfwModel
             if (isJson($fromjson)) {
                 $from = new BpfwMailAddress();
                 $fromjson = json_decode($fromjson);
-                $from->set($tojson);
+                $from->set($fromjson);
             }
 
             echo "Sende Mail ID $key an " . $from->address . "\r\n<br>";

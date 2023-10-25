@@ -117,7 +117,7 @@ class mailaddressComponent extends DefaultComponent
             }
 
             if (empty($attachment["name"])) {
-                $address .= htmlspecialchars($attachment["address"]);
+                $address .= empty($attachment["address"])?"":htmlspecialchars($attachment["address"]);
             } else {
 
                 $address .= htmlspecialchars($attachment["name"] . " <" . $attachment["address"] . ">");

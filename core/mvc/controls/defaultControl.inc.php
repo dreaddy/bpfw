@@ -154,7 +154,24 @@ class DefaultControl
 
         // echo "handleAjaxCommand" . get_class($this);
 
-        if ($command == "getAddTitle") {
+        if ($command == "saveCheckbox" || $command == "saveGraphicalcombobox") {
+
+            $colkey = bpfw_getDb()->escape_string($_POST["colkey"]);
+
+            if(!isset($this->model->getDbModel()[$colkey])){
+                die("not existing in model");
+            }
+
+            $marketingId = (bool)$_POST["rowvalue"];
+
+            $val = (int)$_POST["colvalue"];
+            bpfw_getDb()->makeQuery("UPDATE ".$this->model->getTableName()." set `$colkey` = NOT `$colkey` where ".$this->model->getKeyName()." = '" . $marketingId . "'");
+
+            // var_dump($_POST);
+
+        } else if ($command == "empty") {
+            ;
+        }else if ($command == "getAddTitle") {
             if (method_exists($this->model->view, "getAddTitle")) {
                 echo json_encode($this->model->view->getAddTitle());
             } else {

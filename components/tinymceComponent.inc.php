@@ -123,7 +123,7 @@ class TinymceComponent extends DefaultComponent
         menubar:false,
         statusbar:false,
         language_url : '<?php echo $lang_include; ?>',
-        language: 'de',
+        language: '<?php echo $lang; ?>',
         plugins: [
         'advlist autolink link image lists charmap print preview hr anchor pagebreak',
         'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
@@ -141,8 +141,8 @@ class TinymceComponent extends DefaultComponent
         /*theme_advanced_resizing_max_width : 300,*/
         menubar:false,
         statusbar:false,
-        language_url : '<?php echo BPFW_WWW_URI; ?>tinymce_languages/langs/de.js',
-        language: 'de',
+        language_url : '<?php echo $lang_include; ?>',
+        language: '<?php echo $lang; ?>',
         readonly : 1,
         plugins: [
         'advlist autolink link image lists charmap print preview hr anchor pagebreak',

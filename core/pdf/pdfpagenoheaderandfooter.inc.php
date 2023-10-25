@@ -29,7 +29,7 @@
 
 require_once(BPFW_CORE_PATH . "pdf/pdfpage.inc.php");
 
-class PdfPageNoHeaderAndFooter extends pdfPage
+class PdfPageNoHeaderAndFooter extends PdfPage
 {
 
     function __construct($name)

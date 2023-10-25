@@ -335,7 +335,7 @@ abstract class DbModel
 
             if (defined("SAVE_CREATED_MODIFIED") && SAVE_CREATED_MODIFIED && !empty($modelfields) || $this->saveTimestampsInTable === true || $this->createSearchIndex === true) {
                 $this->addTimestamp("bpfw_created", "Created (local)", array(VIEWSETTING::DEFAULTVALUE => "NOW()", FORMSETTING::PAGE => 1, FORMSETTING::DISABLED => true, LISTSETTING::HIDDENONLIST => true, FORMSETTING::HIDDENONADD => true, FORMSETTING::HIDDENONEDIT => true, FORMSETTING::POSITION => POSITION_RIGHT));
-                $this->addTimestamp("bpfw_modified", "Last edited (local)", array(FORMSETTING::PAGE => 1, FORMSETTING::DISABLED => true, LISTSETTING::HIDDENONLIST => true, FORMSETTING::HIDDENONADD => true, FORMSETTING::HIDDENONEDIT => true, FORMSETTING::POSITION => POSITION_RIGHT));
+                $this->addTimestamp("bpfw_modified", "Last edited (local)", array(VIEWSETTING::DEFAULTVALUE => "NOW()", FORMSETTING::PAGE => 1, FORMSETTING::DISABLED => true, LISTSETTING::HIDDENONLIST => true, FORMSETTING::HIDDENONADD => true, FORMSETTING::HIDDENONEDIT => true, FORMSETTING::POSITION => POSITION_RIGHT));
             }
 
             if ($this->createSearchIndex) {
@@ -597,7 +597,7 @@ abstract class DbModel
                     ;
                 }
                 if(!isset($data[$mk]) || $data[$mk] === "" || $data[$mk] === array()){
-                    bpfw_error_add_to_component(__("Required input field not set").": " . $mv->label . "/" . $mk . "/" . $data[$mk]->data . "/" . json_encode($mv), $mv);
+                    bpfw_error_add_to_component(__("Required input field not set").": " . $mv->label . "/" . $mk . "/" . (is_array($data) && array_key_exists($mk, $data)!=null?$data[$mk]->data:"") . "/" . json_encode($mv), $mv);
                     // throw new Exception("CreateArrayWithDataAndFieldinfoFromPlainKvpArray Required Value not set: " . $mk . " in " . $mv->name . " " . $this->GetTableName() . " data:" . print_r($data, true));
                 }
             }

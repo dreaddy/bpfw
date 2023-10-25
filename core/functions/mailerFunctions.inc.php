@@ -71,7 +71,7 @@ function bpfw_create_mailer(string $sender = "", string $sender_name = "", bool 
     }
 
     $mail->CharSet = "UTF-8";
-    $mail->setFrom($sender, $sender_name); //bpfw_loadSetting(SETTING_EMAIL_ABSENDER), bpfw_loadSetting(SETTING_EMAIL_ABSENDER_NAME));
+    $mail->setFrom($sender, empty($sender_name)?"":$sender_name); //bpfw_loadSetting(SETTING_EMAIL_ABSENDER), bpfw_loadSetting(SETTING_EMAIL_ABSENDER_NAME));
     $mail->Debugoutput = "echo";
     $mail->isHTML();
 
@@ -297,21 +297,19 @@ function bpfw_sendmail_with_mailer(string $subject, string $text, $to, $cc = nul
  * save a mail in the outbox and send it without delay
  * @param string $subject
  * @param string $text
- * @param $to
- * @param null $cc
- * @param null $bcc
- * @param null $from
+ * @param BpfwMailAddress[]|BpfwMailAddress $to
+ * @param BpfwMailAddress[]|BpfwMailAddress|null $cc
+ * @param BpfwMailAddress[]|BpfwMailAddress|null $bcc
+ * @param BpfwMailAddress|null $from
  * @param array $attachments
  * @param boolean $debug
  * @param bool $testmode
  * @return bool
  * @throws Exception
  */
-function bpfw_sendmail_with_mailer_send_directly(string $subject, string $text, $to, $cc = null, $bcc = null, $from = null, array $attachments = array(), bool $debug = false, bool $testmode = false): bool
+function bpfw_sendmail_with_mailer_send_directly(string $subject, string $text, BpfwMailAddress|array $to, BpfwMailAddress|array $cc = null, BpfwMailAddress|array $bcc = null, BpfwMailAddress $from = null, array $attachments = array(), bool $debug = false, bool $testmode = false): bool
 {
-
     return bpfw_createModelByName("maileroutbox")->createMail($subject, $text, $to, $cc, $bcc, $from, $attachments, true, $debug, $testmode);
-
 }
 
 
@@ -385,9 +383,9 @@ class BpfwMailAddress
  * Send a mail through the system. Not saved in Outbox.
  * @param string $subject
  * @param string $text
- * @param BpfwMailAddress|$to |BpfwMailAddress[] $to
- * @param BpfwMailAddress|null $cc |BpfwMailAddress[]||null $cc
- * @param BpfwMailAddress|null $bcc |BpfwMailAddress[]||null $bcc
+ * @param BpfwMailAddress|BpfwMailAddress[] $to
+ * @param BpfwMailAddress|null|BpfwMailAddress[] $cc
+ * @param BpfwMailAddress|null|BpfwMailAddress[] $bcc
  * @param BpfwMailAddress|null $from |null $from
  * @param array|BpfwMailAttachmentInterface $attachments |BpfwMailAttachmentInterface[]||null $attachments
  * @param boolean $debug
@@ -395,7 +393,7 @@ class BpfwMailAddress
  * @throws \PHPMailer\PHPMailer\Exception
  * @throws Exception
  */
-function bpfw_sendmail(string $subject, string $text, BpfwMailAddress $to, BpfwMailAddress $cc = null, BpfwMailAddress $bcc = null, BpfwMailAddress $from = null, array|BpfwMailAttachmentInterface $attachments = array(), bool $debug = false): bool
+function bpfw_sendmail(string $subject, string $text, BpfwMailAddress|array $to, BpfwMailAddress|array $cc = null, BpfwMailAddress|array $bcc = null, BpfwMailAddress $from = null, array|BpfwMailAttachmentInterface $attachments = array(), bool $debug = false): bool
 {
 
 

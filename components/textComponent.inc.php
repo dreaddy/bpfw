@@ -77,17 +77,22 @@ class TextComponent extends DefaultComponent
     function validateValue(array $errorsAlreadyFound, string $type, mixed $value, BpfwModelFormfield $headerValue, array $formValues, string $key, BpfwModel $model): array
     {
 
+
         if ($headerValue->formfield_subtype == "email") {
 
-            if (!empty($value)) {
+            if (!empty($value) || $headerValue->required) {
                 if ($value instanceof DbSubmitValue) {
-                    if (!filter_var($value->data, FILTER_VALIDATE_EMAIL)) {
-                        $errorsAlreadyFound[] = __("Invalid email");
+                    if(!empty($value->data) || $headerValue->required) {
+                        if (!filter_var($value->data, FILTER_VALIDATE_EMAIL)) {
+                            $errorsAlreadyFound[] = __("Invalid email");
+                        }
                     }
                 } else {
+
                     if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
                         $errorsAlreadyFound[] = __("Invalid email");
                     }
+
                 }
             }
 

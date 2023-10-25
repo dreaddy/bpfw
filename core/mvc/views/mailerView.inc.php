@@ -113,7 +113,6 @@ class MailerView extends DefaultView
 
             <?php foreach ($targetAudience as $audience => $audienceLabel) {
 
-
                 $values = array();
 
                 switch ($audience) {

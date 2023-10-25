@@ -33,13 +33,13 @@
  * @param $input ?float
  * @return string
  */
-function bpfw_float_to_eur(?float $input): string
+function bpfw_float_to_eur(?float $input, $decimal_separator = ",", $thousands_separator = "."): string
 {
 
-    if(empty($input))return "0,00";
+    if(empty($input))return "0{$decimal_separator}00";
 
     $floored = round($input, 2, PHP_ROUND_HALF_DOWN);
-    return number_format($floored, 2, ",", ".");
+    return number_format($floored, 2, $decimal_separator, $thousands_separator);
 
 }
 

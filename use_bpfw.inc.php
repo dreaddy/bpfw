@@ -34,7 +34,7 @@ date_default_timezone_set('Europe/Berlin');
 // ps_files_cleanup_dir opendir(/tmp/.priv) failed: Permission denied(13) in (use_bpfw.inc.php line 9)
 session_start();
 
-if (!is_writable(session_save_path())) {
+if (session_save_path() != '' && !is_writable(session_save_path())) {
     echo 'Session path "'.session_save_path().'" is not writable for PHP!';
 }
 

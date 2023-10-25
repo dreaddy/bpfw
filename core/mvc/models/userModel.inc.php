@@ -148,7 +148,7 @@ class UserModel extends BpfwModel
             $this->addComboBox("salutation", "Salutation", new EnumHandlerCallback("bpfw_getSalutationArray"), BpfwDbFieldType::TYPE_STRING, array("hiddenOnList" => true));
             $this->addTextField("firstname", "First name");
             $this->addTextField("lastname", "Last name");
-            $this->addTextField("email", "EMail", "default", array("hiddenOnList" => true, FORMSETTING::POSITION => POSITION_RIGHT, FORMSETTING::FORMFIELD_SUBTYPE => TextComponentSubtype::SUBTYPE_EMAIL));
+            $this->addTextField("email", "EMail", "default", array("hiddenOnList" => true, FORMSETTING::POSITION => POSITION_RIGHT, FORMSETTING::FORMFIELD_SUBTYPE => TextComponentSubtype::SUBTYPE_EMAIL, FORMSETTING::REQUIRED=>false));
             $this->addTextField("phone", "Telephone", "default", array("hiddenOnList" => true, FORMSETTING::POSITION => POSITION_RIGHT));
             $this->addTextField("mobile", "Mobile phone", "default", array("hiddenOnList" => true, FORMSETTING::POSITION => POSITION_RIGHT));
             $this->addTextField("street", "Street", "default", array(FORMSETTING::POSITION => POSITION_RIGHT, "hiddenOnList" => true));
