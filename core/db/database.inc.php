@@ -149,7 +149,7 @@ class Database
     var ?mysqli $connection = null;
     var string $host;
 
-    // TODO: besser machen, am besten typ und dbtyp trennen
+    // TODO: improve
     var string $username;
     var string $password;
     var string $database;
@@ -311,6 +311,24 @@ class Database
 
     }
 
+    function tableExists($name): bool
+    {
+
+        $name=$this->escape_string($name);
+
+        $query = "SHOW TABLES LIKE '$name'";
+        $result = $this->makeSelect($query);
+
+
+        if (!empty($result)) {
+
+            return true;
+
+        }
+
+        return false;
+    }
+
     function getAllTables(): array
     {
         $query = "SHOW TABLES";
@@ -341,12 +359,13 @@ class Database
         }
     }
 
-    function fetchKeyValueArray($table, $key, $value, $where = "", $prettifyfunction = null)
+    function fetchKeyValueArray($table, $key, $value, $where = "", $prettifyfunction = null, $orderBy = "")
     {
 
         if (!empty($where)) $where = " WHERE $where";
+        if (!empty($orderBy)) $orderBy = " ORDER BY $orderBy";
 
-        $sql = "select $key as `key`, $value as value from `$table` $where";
+        $sql = "select $key as `key`, $value as value from `$table` $where $orderBy";
 
         // if($table == "productgallery")
         // echo $sql;
@@ -370,13 +389,14 @@ class Database
 
     }
 
-    function fetchKeyValueArrayWithEmpty($table, $key, $value, $where = "", $nullText = "Nicht gesetzt", $prettifyfunction = null)
+    function fetchKeyValueArrayWithEmpty($table, $key, $value, $where = "", $nullText = "Nicht gesetzt", $prettifyfunction = null, $orderBy = "")
     {
 
 
         if (!empty($where)) $where = " WHERE $where";
+        if (!empty($orderBy)) $orderBy = " ORDER BY $orderBy";
 
-        $sql = "select $key as `key`, $value as `value` from `$table` $where";
+        $sql = "select $key as `key`, $value as `value` from `$table` $where $orderBy";
 
         $assoc = $this->makeSelect($sql, "key");
 
@@ -1487,7 +1507,7 @@ class Database
         foreach ($data as $datakey => $datavalue) {
 
             if (isset($datavalue->getDbField()->display) && $datavalue->getDbField()->display == "password" && empty($datavalue->data)) continue;
-
+            if (isset($datavalue->getDbField()->display) && $datavalue->getDbField()->display == "passwordnonhashed" && empty($datavalue->data)) continue;
             // TODO: check
             /*
             foreach($keys as $keyobj){
@@ -1544,6 +1564,7 @@ class Database
             $field = $datavalue->getDbField();
 
             if (isset($field->display) && $field->display == "password" && empty($datavalue->data)) continue;
+            if (isset($field->display) && $field->display == "passwordnonhashed" && empty($datavalue->data)) continue;
 
 
             // TODO: check

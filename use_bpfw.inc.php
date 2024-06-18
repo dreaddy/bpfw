@@ -38,8 +38,6 @@ if (session_save_path() != '' && !is_writable(session_save_path())) {
     echo 'Session path "'.session_save_path().'" is not writable for PHP!';
 }
 
-
-
 /* App wurde gewechselt, logout */
 if(isset($_GET["clean"])){
 
@@ -402,7 +400,6 @@ if(!defined("ACTIVE_APP")){
 
 require_once("core/bpfwconfig.inc.php");
 
-
 if(file_exists(APP_BASE_PATH."includes.inc.php")){
     require_once(APP_BASE_PATH."includes.inc.php");
 }
@@ -507,7 +504,6 @@ function createAdminIfNotExisting($username = "admin", $password = "password"): 
 if(isset($_GET["createadmin"])){
 
     try {
-
         createAdminIfNotExisting();
         echo "Admin created";
     } catch (Exception $e) {

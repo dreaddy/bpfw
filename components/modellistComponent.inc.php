@@ -111,7 +111,6 @@ class ModellistComponent extends DefaultComponent
                         order = [jQuery(this).data("defaultsort"), jQuery(this).data("defaultsortorder")];
                     }
 
-
                     if (!jQuery.fn.DataTable.isDataTable(this)) // check if already initialized
                     {
 

@@ -168,7 +168,6 @@ abstract class Settings2Model extends BpfwModel
 
             /// $this->addTextField("SETTING_PLATFORM_SHARE_ADDRESS", "Adresse für Provision", "default",      array(FORMSETTING::PAGE=>1, LISTSETTING::HIDDENONLIST=>true, VIEWSETTING::DEFAULTVALUE=>$bpfw_defaultsettings[SETTING_PLATFORM_SHARE_ADDRESS] ) );
 
-
             $this->addTextField("SETTING_BACKUP_DIRECTORY", "Backup Folder", "default", array(FORMSETTING::PAGE => 1, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_BACKUP_DIRECTORY]));
             $this->addTextField("SETTING_EXTERNAL_CRONJOB_CALL_CODE", "External Cronjob Auth Key", "default", array(FORMSETTING::PAGE => 1, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_EXTERNAL_CRONJOB_CALL_CODE]));;
             $this->addTextField("SETTING_UNSUBSCRIBE_CALL_CODE", "Unsubscribe Auth Key", "default", array(FORMSETTING::PAGE => 1, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_EXTERNAL_CRONJOB_CALL_CODE]));
@@ -189,18 +188,21 @@ abstract class Settings2Model extends BpfwModel
             $this->addComboBox("SETTING_MAILER_SMTP_AUTH", "SMTP Auth", array("ja" => "ja", "nein" => "nein"), BpfwDbFieldType::TYPE_STRING, array(FORMSETTING::PAGE => 2, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_SMTP_AUTH]));
             $this->addComboBox("SETTING_MAILER_SMTP_ENCRYPTION", "SMTP Encryption", array(PHPMailer::ENCRYPTION_STARTTLS => PHPMailer::ENCRYPTION_STARTTLS, PHPMailer::ENCRYPTION_SMTPS => PHPMailer::ENCRYPTION_SMTPS), BpfwDbFieldType::TYPE_STRING, array(FORMSETTING::PAGE => 2, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_SMTP_ENCRYPTION]));
             $this->addTextField("SETTING_MAILER_SMTP_USERNAME", "SMTP Username", "default", array(FORMSETTING::PAGE => 2, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_SMTP_USERNAME]));
-            $this->addTextField("SETTING_MAILER_SMTP_PASSWORD", "SMTP Password", "default", array(FORMSETTING::PAGE => 2, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_SMTP_PASSWORD]));
+
+            // $this->addTextField("SETTING_MAILER_SMTP_PASSWORD", "SMTP Password", "default", array(FORMSETTING::PAGE => 2, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_SMTP_PASSWORD]));
+            $this->addField("SETTING_MAILER_SMTP_PASSWORD", "SMTP Password", BpfwDbFieldType::TYPE_STRING, "passwordnonhashed", array( FORMSETTING::PAGE => 2, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_SMTP_PASSWORD]));
 
             $this->addTextField("SETTING_MAILER_IMAP_MAIL", "IMAP Mail address", "default", array(FORMSETTING::PAGE => 3, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_IMAP_MAIL]));
             $this->addTextField("SETTING_MAILER_IMAP_USERNAME", "IMAP Username", "default", array(FORMSETTING::PAGE => 3, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_IMAP_USERNAME]));
             $this->addTextFieldNumeric("SETTING_MAILER_IMAP_PORT", "IMAP Port", array(FORMSETTING::PAGE => 3, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_IMAP_PASSWORD]));
-            $this->addTextField("SETTING_MAILER_IMAP_PASSWORD", "IMAP Password", "default", array(FORMSETTING::PAGE => 3, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_SMTP_ENCRYPTION]));
+            // $this->addTextField("SETTING_MAILER_IMAP_PASSWORD", "IMAP Password", "default", array( FORMSETTING::PAGE => 3, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_SMTP_ENCRYPTION]));
+            $this->addField("SETTING_MAILER_IMAP_PASSWORD", "IMAP Password", BpfwDbFieldType::TYPE_STRING, "passwordnonhashed", array( FORMSETTING::PAGE => 3, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_IMAP_PASSWORD]));
+
             $this->addTextField("SETTING_MAILER_IMAP_FOLDER", "IMAP Folder", "default", array(FORMSETTING::PAGE => 3, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_IMAP_FOLDER]));
             $this->addComboBox("SETTING_MAILER_IMAP_ENCRYPTION", "IMAP Encryption", array("ssl" => "ssl", "keine" => "keine"), BpfwDbFieldType::TYPE_STRING, array(FORMSETTING::PAGE => 3, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_IMAP_ENCRYPTION]));
             $this->addTextField("SETTING_MAILER_IMAP_HOST", "IMAP Host/Server", "default", array(FORMSETTING::PAGE => 3, LISTSETTING::HIDDENONLIST => true, VIEWSETTING::DEFAULTVALUE => $bpfw_defaultsettings[SETTING_MAILER_IMAP_HOST]));
 
             $this->addComboBox("SETTING_DEFAULT_LANGUAGE", "Default language", new EnumHandlerCallback("bpfw_get_active_languages"), BpfwDbFieldType::TYPE_STRING, array(VIEWSETTING::DEFAULTVALUE => $defaultlang, FORMSETTING::POSITION => POSITION_LEFT, LISTSETTING::HIDDENONLIST => true));
-
 
         }
 

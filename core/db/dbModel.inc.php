@@ -597,7 +597,7 @@ abstract class DbModel
                     ;
                 }
                 if(!isset($data[$mk]) || $data[$mk] === "" || $data[$mk] === array()){
-                    bpfw_error_add_to_component(__("Required input field not set").": " . $mv->label . "/" . $mk . "/" . (is_array($data) && array_key_exists($mk, $data)!=null?$data[$mk]->data:"") . "/" . json_encode($mv), $mv);
+                    bpfw_error_add_to_component(__("Required input field not set").": " . $mv->label . "/" . $mk . "/" . (is_array($data) && array_key_exists($mk, $data)!=null?(!empty($data[$mk]->data)?$data[$mk]->data:$data[$mk]):"") . "/" . json_encode($mv), $mv);
                     // throw new Exception("CreateArrayWithDataAndFieldinfoFromPlainKvpArray Required Value not set: " . $mk . " in " . $mv->name . " " . $this->GetTableName() . " data:" . print_r($data, true));
                 }
             }

@@ -79,7 +79,7 @@ class UserModelTemplate extends DbModelTemplate
             $this->addComboBox("salutation", "Anrede", new EnumHandlerCallback("bpfw_getSalutationArray"), BpfwDbFieldType::TYPE_STRING, array("hiddenOnList" => true));
             $this->addTextField("firstname", "Vorname");
             $this->addTextField("lastname", "Nachname");
-            $this->addTextField("email", "E-Mail", "default", array("hiddenOnList" => true, FORMSETTING::POSITION => POSITION_RIGHT, FORMSETTING::FORMFIELD_SUBTYPE => TextComponentSubtype::SUBTYPE_EMAIL, FORMSETTING::REQUIRED=>false));
+            $this->addTextField("email", "E-Mail", "default", array("hiddenOnList" => true, FORMSETTING::POSITION => POSITION_RIGHT, FORMSETTING::FORMFIELD_SUBTYPE => TextComponentSubtype::SUBTYPE_EMAIL));
             $this->addTextField("phone", "Telefon", "default", array("hiddenOnList" => true, FORMSETTING::POSITION => POSITION_RIGHT));
             $this->addTextField("mobile", "Mobil", "default", array("hiddenOnList" => true, FORMSETTING::POSITION => POSITION_RIGHT));
             $this->addTextField("street", "Straße", "default", array(FORMSETTING::POSITION => POSITION_RIGHT, "hiddenOnList" => true));

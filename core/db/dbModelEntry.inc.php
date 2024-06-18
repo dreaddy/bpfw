@@ -3,8 +3,10 @@
 /**
  * can be seen as a lighter version of DbModel that is limited to contain the data of one Database row
  */
+#[\AllowDynamicProperties]
 class DbModelEntry
 {
+
 
     var DbModel $model;
 

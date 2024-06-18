@@ -281,7 +281,7 @@ function bpfw_current_mysql_datetimestring(): string
 function bpfw_DateStringToMysqlDateString(?string $dateString): string
 {
 
-    if (empty($dateString)) return "";
+    if (empty($dateString)) return "1970-01-01";
 
     $datestring_parts = explode(".", $dateString);
     if (count($datestring_parts) != 3) return "invalid";

@@ -262,9 +262,9 @@ class PdfmanagerModel extends BpfwModel
                 $variables["rcpt" . "." . $key] = $variables["customer" . "." . $key];
             }
             if(!empty($variables["customer.salutation_n"]))
-                $variables["rcpt.salutation_n"] = $variables["customer.salutation_n"];
+            $variables["rcpt.salutation_n"] = $variables["customer.salutation_n"];
             if(!empty($variables["customer.salutationFull"]))
-                $variables["rcpt.salutationFull"] = $variables["customer.salutationFull"];
+            $variables["rcpt.salutationFull"] = $variables["customer.salutationFull"];
             $variables["rcpt.salutation"] = $variables["customer.salutation"];
         }
 

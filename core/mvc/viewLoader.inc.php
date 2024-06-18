@@ -283,7 +283,9 @@ class ViewLoader
         if ($model->showdata && $model->showTopButtons) {
 
             if (!$editMode) {
+
                 if (!$print) {
+
                     $makePrint = bpfw_hasPermission($model->minUserrankForPrint); //bpfw_isAdmin();
                     $makeAdd = bpfw_hasPermission($model->minUserrankForAdd); //true; && !$addmode
 

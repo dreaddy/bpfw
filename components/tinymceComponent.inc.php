@@ -114,11 +114,24 @@ class TinymceComponent extends DefaultComponent
               */
 
         ?>
-
         tinymce.init({
         selector: '.bpfw_tinymce',
         skin: 'oxide',
         height: 300,
+
+        init_instance_callback: function (editor) {
+        editor.on('Keydown Change', function (e) {
+        // console.log('Editor contents was changed.');
+
+        if (typeof getIdOfCurrentDialog === 'function') {
+        var dialogid = getIdOfCurrentDialog();
+            jQuery("#" + dialogid + " .bpfwbutton.editAction").show();
+            jQuery("#" + dialogid + " .bpfwbutton.cancelAction > div > div").html(__("Discard"));
+        }
+
+        });
+        },
+
         /*theme_advanced_resizing_max_width : 300,*/
         menubar:false,
         statusbar:false,
@@ -141,6 +154,7 @@ class TinymceComponent extends DefaultComponent
         /*theme_advanced_resizing_max_width : 300,*/
         menubar:false,
         statusbar:false,
+        /*language_url : '<?php echo BPFW_WWW_URI; ?>tinymce_languages/langs/de.js',*/
         language_url : '<?php echo $lang_include; ?>',
         language: '<?php echo $lang; ?>',
         readonly : 1,
@@ -171,6 +185,7 @@ class TinymceComponent extends DefaultComponent
      */
     public function GetDisplayFormattedPlainValue(mixed $value, string $fieldName, BpfwModelFormfield $fieldDbModel, int|string $rowKey, BpfwModel $model): string
     {
+        if(empty($value))return "";
         return strip_tags($value);
     }
 

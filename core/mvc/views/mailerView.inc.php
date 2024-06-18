@@ -113,6 +113,7 @@ class MailerView extends DefaultView
 
             <?php foreach ($targetAudience as $audience => $audienceLabel) {
 
+
                 $values = array();
 
                 switch ($audience) {
@@ -181,6 +182,7 @@ class MailerView extends DefaultView
                     <button data-audience="<?php echo $audience; ?>"
                             class="send_mail audience-<?php echo $audience; ?>"><?php echo __("Save mass mail for sending in outbox"); ?>
                     </button>
+
                     <br/>
                     <br/>
 

@@ -129,6 +129,7 @@ if (!$tryLogin && isset($_GET['logout'])) {
             $usertype = $_SESSION['usertype'];
         }
     }
+
 }
 
 if (!bpfw_isLoggedIn()) {

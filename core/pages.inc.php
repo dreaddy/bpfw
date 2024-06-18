@@ -61,6 +61,7 @@ if (!empty(getorpost('p'))) {
 
 try {
     $model = $modelLoader->findAndCreateModel($page);
+    // echo "<pre>".$page.get_class($model).json_encode($model, JSON_PRETTY_PRINT)."</pre>";
 } catch (Exception $e) {
     echo "Exception " . $e->getMessage() . " - " . $e->getTraceAsString();
     die();

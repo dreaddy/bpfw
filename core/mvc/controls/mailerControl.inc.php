@@ -149,6 +149,10 @@ class MailerControl extends DefaultControl
                 $text = str_replace("{{{newsletter_Anrede}}}", $salutation, $text);
                 $text = str_replace("{{{newsletter_Salutation}}}", $salutation, $text);
 
+                $text = str_replace("{{{newsletter_firstname}}}", $userdata["firstname"], $text);
+                $text = str_replace("{{{newsletter_lastname}}}", $userdata["lastname"], $text);
+                $text = str_replace("{{{newsletter_salutationStandalone}}}", $userdata["salutation"], $text);
+
                 $email = $userdata["email"];
 
                 // $email = "tlueders@gmx.de"; // testing, option?

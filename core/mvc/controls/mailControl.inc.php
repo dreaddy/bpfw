@@ -121,7 +121,7 @@ class MailControl extends DefaultControl
             if ($success) {
                 echo "Mail an " . $_POST["rcpt"] . " versendet und gespeichert";
             } else {
-                echo "Mailversand fehlgeschlagen: " . bpfw_get_last_mailerror();
+                echo "Mail error: " . bpfw_get_last_mailerror();
             }
 
 

@@ -126,6 +126,7 @@ class PdfPage
             $mpdf->SetHTMLFooter($footerhtml);
         }
 
+
         $mpdf->AddPage('', '', '', '', '', $this->config["margin_left"], $this->config["margin_right"], $this->config["margin_top"], $this->config["margin_bottom"], $this->config["margin_header"], $this->config["margin_footer"]);
 
 

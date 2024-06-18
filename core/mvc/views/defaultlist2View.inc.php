@@ -581,7 +581,7 @@ class DefaultList2View extends DefaultlistView
     {
 
 
-        bpfw_register_js("defaultlistmodalview_js", BPFW_JS_URI . "defaultlistmodalView.js?v=11", true);
+        bpfw_register_js("defaultlistmodalview_js", BPFW_JS_URI . "defaultlistmodalView.js?v=13", true);
 
         parent::registerJs();
 

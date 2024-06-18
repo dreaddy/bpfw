@@ -483,6 +483,10 @@ function bpfw_sendmail(string $subject, string $text, BpfwMailAddress|array $to,
 
     $_mailerror = $mailer->ErrorInfo;
 
+    if(!empty($_mailerror)){
+        echo $_mailerror;
+    }
+
     return $response;
 
 }

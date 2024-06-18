@@ -75,6 +75,7 @@ function bpfw_fromUsNumberFormat(string $value): string
 
 function bpfw_format_for_print($value)
 {
+
     if($value == null){
         return "";
     }

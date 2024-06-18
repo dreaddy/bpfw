@@ -1,4 +1,6 @@
-﻿var imgCropperArray = [];
+﻿var openingDialog = false;
+
+var imgCropperArray = [];
 
 var currentTabPage = 1;
 
@@ -68,6 +70,10 @@ function setPaginationCssFor(oldpage, newpage, makeTabActive) {
 
 function startEdit(id, page = false, isRootHierachy = false, temptable = 0) {
 
+    if(openingDialog){
+        return;
+    }
+
     //  e.preventDefault();
     // alert(jQuery(this).data("id"));
     // var id = jQuery(this).data("id");
@@ -105,6 +111,8 @@ function startEdit(id, page = false, isRootHierachy = false, temptable = 0) {
 
     var url = "?p=" + currentPage + "&ajaxCall=true&command=createEditDialog&filter=" + filter;
 
+    openingDialog = true;
+
     jQuery.ajax({
         type: 'POST',
         cache: false,
@@ -112,6 +120,8 @@ function startEdit(id, page = false, isRootHierachy = false, temptable = 0) {
         data: {filter: filter, hierachy: hierachy, rowid: id, temptable: temptable ? 1 : 0},
         async: true
     }).done(function (data) {
+
+        openingDialog = false;
 
         var newdialog = undefined;
         try {
@@ -235,6 +245,10 @@ function startEdit(id, page = false, isRootHierachy = false, temptable = 0) {
 
 function startIFrameDialog(id, iframeurl = "", page = false, isRootHierachy = false, filter_override = null) {
 
+    if(openingDialog){
+        return;
+    }
+
     // alert(jQuery(this).data("id"));
 
     if (isRootHierachy) {
@@ -261,6 +275,8 @@ function startIFrameDialog(id, iframeurl = "", page = false, isRootHierachy = fa
 
     var url = "?p=" + currentPage + "&ajaxCall=true&command=createIFrameDialog&filter=" + filter;
 
+    openingDialog = true;
+
     jQuery.ajax({
         type: 'POST',
         cache: false,
@@ -269,6 +285,7 @@ function startIFrameDialog(id, iframeurl = "", page = false, isRootHierachy = fa
         async: true
     }).done(function (data) {
 
+        openingDialog = false;
 
         var newdialog = undefined;
         try {
@@ -315,6 +332,10 @@ function startIFrameDialog(id, iframeurl = "", page = false, isRootHierachy = fa
 
 function startDuplicate(id, page = false, isRootHierachy = false, temptable = 0) {
 
+    if(openingDialog){
+        return;
+    }
+
     // alert(jQuery(this).data("id"));
 
     if (isRootHierachy) {
@@ -345,6 +366,8 @@ function startDuplicate(id, page = false, isRootHierachy = false, temptable = 0)
 
     var url = "?p=" + currentPage + "&ajaxCall=true&command=createAddDialog&filter=" + filter;
 
+    openingDialog = true;
+
     jQuery.ajax({
         type: 'POST',
         cache: false,
@@ -352,6 +375,8 @@ function startDuplicate(id, page = false, isRootHierachy = false, temptable = 0)
         data: {filter: filter, hierachy: hierachy, rowid: id, temptable: temptable ? 1 : 0},
         async: true
     }).done(function (data) {
+
+        openingDialog = false;
 
         var newdialog = undefined;
         try {
@@ -824,7 +849,7 @@ function sendAddEntries(page, formdata) {
                     /* var identifier = getIdOfCurrentDialog();
 
                    jQuery("#" + identifier + ".manipulateDataDialog").hide();
-                  
+
                     var ithis = jQuery("#" + identifier + '.manipulateDataDialog');
                     dialogHidden(ithis);*/
 
@@ -1042,9 +1067,9 @@ function sendEditEntries(page, formdata) {
                     jQuery("#" + getIdOfCurrentDialog() + ".editEntryDialog").modal('hide');
                 } else {
                     /*  var identifier = getIdOfCurrentDialog();
-  
+
                       jQuery("#" + identifier + ".editEntryDialog").hide();
-  
+
                       var ithis = jQuery("#" + identifier + '.editEntryDialog');
                       dialogHidden(ithis);*/
 
@@ -1078,6 +1103,10 @@ function sendEditEntries(page, formdata) {
 
 function startAdd(e, buttonid) {
 
+    if(openingDialog){
+        return;
+    }
+
     var filter = getQueryVariable("filter");
 
 
@@ -1086,7 +1115,9 @@ function startAdd(e, buttonid) {
     var currentPage = false;
     if (page === false || page === "" || page === undefined) {
         currentPage = getQueryVariable('p');
-        if (currentPage === false) currentPage = "";
+        if (currentPage === false){
+            currentPage = "";
+        }
     } else {
         currentPage = page;
     }
@@ -1117,7 +1148,7 @@ function startAdd(e, buttonid) {
 
 
     var url = "?p=" + currentPage + "&ajaxCall=true&command=createAddDialog&filter=" + filter;
-
+    openingDialog = true;
     jQuery.ajax({
         type: 'POST',
         cache: false,
@@ -1125,7 +1156,7 @@ function startAdd(e, buttonid) {
         data: {filter: filter, hierachy: hierachy, rowid: 0, temptable: temptable ? 1 : 0},
         async: true
     }).done(function (data) {
-
+        openingDialog = false;
         // alert(jQuery(this).data("id"));
         var newdialog = undefined;
         try {

@@ -28,6 +28,7 @@
 /** @noinspection ALL */
 
 // common
+
 class VIEWSETTING
 {
 
@@ -279,6 +280,7 @@ class BpfwSortsearch
  * @version 1.0
  * @author torst
  */
+#[AllowDynamicProperties]
 class BpfwModelFormfield
 {
 

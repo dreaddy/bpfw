@@ -66,7 +66,7 @@ class TextComponent extends DefaultComponent
      * Summary of validateValue
      * @param array $errorsAlreadyFound
      * @param string $type
-     * @param mixed $value
+     * @param string|DbSubmitValue $value
      * @param BpfwModelFormfield $headerValue
      * @param array $formValues
      * @param string $key
@@ -79,7 +79,6 @@ class TextComponent extends DefaultComponent
 
 
         if ($headerValue->formfield_subtype == "email") {
-
             if (!empty($value) || $headerValue->required) {
                 if ($value instanceof DbSubmitValue) {
                     if(!empty($value->data) || $headerValue->required) {
@@ -89,9 +88,9 @@ class TextComponent extends DefaultComponent
                     }
                 } else {
 
-                    if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
-                        $errorsAlreadyFound[] = __("Invalid email");
-                    }
+                        if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
+                            $errorsAlreadyFound[] = __("Invalid email");
+                        }
 
                 }
             }

@@ -61,7 +61,7 @@ class DefaultView
         $this->model->setView($this);
 
 
-        bpfw_register_js("defaultlistmodalview_js", BPFW_JS_URI . "defaultlistmodalView.js?v=11", true);
+        bpfw_register_js("defaultlistmodalview_js", BPFW_JS_URI . "defaultlistmodalView.js?v=13", true);
 
         // view js
         $name = get_class($this); // original name
@@ -95,34 +95,34 @@ class DefaultView
         //echo APP_WWW_PATH." /js ".$name." .js";
         if (file_exists(APP_WWW_PATH . "js/" . $name . ".js")) {
             $appfound = true;
-            bpfw_register_js($name . "_js", APP_WWW_URI . "js/" . $name . ".js?v=9", true);
+            bpfw_register_js($name . "_js", APP_WWW_URI . "js/" . $name . ".js?v=10", true);
         }
 
         if (PARENT_WWW_PATH != APP_WWW_PATH && file_exists(PARENT_WWW_PATH . "js/" . $name . ".js")) {
             $parentfound = true;
-            bpfw_register_js($name . "_js", PARENT_WWW_URI . "js/" . $name . ".js?v=9", true);
+            bpfw_register_js($name . "_js", PARENT_WWW_URI . "js/" . $name . ".js?v=10", true);
         }
 
         if (file_exists(BPFW_WWW_PATH . "js/" . $name . ".js")) {
             $bpfwfound = true;
-            bpfw_register_js($name . "_js", BPFW_WWW_URI . "js/" . $name . ".js?v=9", true);
+            bpfw_register_js($name . "_js", BPFW_WWW_URI . "js/" . $name . ".js?v=10", true);
         }
 
 
         $name = strtolower($nameToCheck); // lower case
         if (!$appfound && file_exists(APP_WWW_PATH . "js/" . $name . ".js")) {
             $appfound = true;
-            bpfw_register_js($name . "_js", APP_WWW_URI . "js/" . $name . ".js?v=9", true);
+            bpfw_register_js($name . "_js", APP_WWW_URI . "js/" . $name . ".js?v=10", true);
         }
 
         if (!$parentfound && PARENT_WWW_PATH != APP_WWW_PATH && file_exists(PARENT_WWW_PATH . "js/" . $name . ".js")) {
             $parentfound = true;
-            bpfw_register_js($name . "_js", PARENT_WWW_URI . "js/" . $name . ".js?v=9", true);
+            bpfw_register_js($name . "_js", PARENT_WWW_URI . "js/" . $name . ".js?v=10", true);
         }
 
         if (!$bpfwfound && file_exists(BPFW_WWW_PATH . "js/" . $name . ".js")) {
             $bpfwfound = true;
-            bpfw_register_js($name . "_js", BPFW_WWW_URI . "js/" . $name . ".js?v=9", true);
+            bpfw_register_js($name . "_js", BPFW_WWW_URI . "js/" . $name . ".js?v=10", true);
         }
 
 
@@ -130,17 +130,17 @@ class DefaultView
 
         if (!$appfound && file_exists(APP_WWW_PATH . "js/" . $name . ".js")) {
             $appfound = true;
-            bpfw_register_js($name . "_js", APP_WWW_URI . "js/" . $name . ".js?v=9", true);
+            bpfw_register_js($name . "_js", APP_WWW_URI . "js/" . $name . ".js?v=10", true);
         }
 
         if (!$parentfound && PARENT_WWW_PATH != APP_WWW_PATH && file_exists(PARENT_WWW_PATH . "js/" . $name . ".js")) {
             $parentfound = true;
-            bpfw_register_js($name . "_js", PARENT_WWW_URI . "js/" . $name . ".js?v=9", true);
+            bpfw_register_js($name . "_js", PARENT_WWW_URI . "js/" . $name . ".js?v=10", true);
         }
 
         if (!$bpfwfound && file_exists(BPFW_WWW_PATH . "js/" . $name . ".js")) {
             $bpfwfound = true;
-            bpfw_register_js($name . "_js", BPFW_WWW_URI . "js/" . $name . ".js?v=9", true);
+            bpfw_register_js($name . "_js", BPFW_WWW_URI . "js/" . $name . ".js?v=10", true);
         }
         
     }

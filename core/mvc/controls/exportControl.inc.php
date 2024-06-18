@@ -171,6 +171,7 @@ class ExportControl extends DefaultControl
                 header('Content-disposition: attachment; filename=' . $modelname . '_' . date("d.m.Y") . '.json');
                 header('Content-type: application/json');
             }
+
             // echo '{"data":[';
 
         }

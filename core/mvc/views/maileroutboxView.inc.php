@@ -76,13 +76,13 @@ class maileroutboxView extends DefaultListmodalView
         <div id="filterTable" class="display" style="padding-left:18px;">
 
             <button class="mailboxnav <?php echo((getorpost("box") == "outbox") ? "active_nav_mail" : ""); ?>"
-                    onclick="window.open('/?p=maileroutbox&box=outbox','_self')"><?php echo __("Outbox"); ?>
+                    onclick="window.open('?p=maileroutbox&box=outbox','_self')"><?php echo __("Outbox"); ?>
             </button>
             <button class="mailboxnav <?php echo((getorpost("box") == "sent") ? "active_nav_mail" : ""); ?>"
-                    onclick="window.open('/?p=maileroutbox&box=sent','_self')"><?php echo __("Sent"); ?>
+                    onclick="window.open('?p=maileroutbox&box=sent','_self')"><?php echo __("Sent"); ?>
             </button>
             <button class="mailboxnav <?php echo((getorpost("box") == "deleted") ? "active_nav_mail" : ""); ?>"
-                    onclick="window.open('/?p=maileroutbox&box=deleted','_self')"><?php echo __("Deleted"); ?>
+                    onclick="window.open('?p=maileroutbox&box=deleted','_self')"><?php echo __("Deleted"); ?>
             </button>
 
         </div>

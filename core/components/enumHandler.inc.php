@@ -190,6 +190,9 @@ class EnumHandlerDb extends EnumHandlerInterface
     var string $key;
     var string $value;
     var string $where;
+    var string $orderBy;
+    var ?string $nullText;
+
     var bool $withemptyValue;
     var mixed $prettifyfunction;
     var array $cache = array();
@@ -204,7 +207,7 @@ class EnumHandlerDb extends EnumHandlerInterface
      * @param string|null $nullText
      * @param callable|null $prettifyfunction
      */
-    function __construct(string $table, string $key, string $value, string $where = '', bool $withemptyValue = false, string $nullText = null, ?callable $prettifyfunction = null)
+    function __construct(string $table, string $key, string $value, string $where = '', bool $withemptyValue = false, ?string $nullText = null, ?callable $prettifyfunction = null, $orderBy = "")
     {
 
 
@@ -213,6 +216,7 @@ class EnumHandlerDb extends EnumHandlerInterface
         $this->value = $value;
         $this->where = $where;
         $this->nullText = $nullText;
+        $this->orderBy = $orderBy;
 
         if (empty($nullText)) {
             $nullText = "nicht gesetzt";
@@ -235,10 +239,10 @@ class EnumHandlerDb extends EnumHandlerInterface
         if (empty($this->cache) || empty($this->cache[$this->where])) {
 
             if ($this->withemptyValue) {
-                $this->cache[$this->where] = $database->fetchKeyValueArrayWithEmpty($this->table, $this->key, $this->value, $this->where, $this->nullText, $this->prettifyfunction);
+                $this->cache[$this->where] = $database->fetchKeyValueArrayWithEmpty($this->table, $this->key, $this->value, $this->where, $this->nullText, $this->prettifyfunction, $this->orderBy);
 
             } else {
-                $this->cache[$this->where] = $database->fetchKeyValueArray($this->table, $this->key, $this->value, $this->where, $this->prettifyfunction);
+                $this->cache[$this->where] = $database->fetchKeyValueArray($this->table, $this->key, $this->value, $this->where, $this->prettifyfunction, $this->orderBy);
             }
 
         }

@@ -210,7 +210,11 @@ jQuery(document).ready(function () {
         };
     }
 
+    jQuery.fn.dataTableExt.pager.numbers_length = 21;
+
     adminTablesAjax = jQuery('#adminTable_ajax').DataTable({
+
+        /* "pagingType": "full", */
 
         searchDelay: 750,
 
